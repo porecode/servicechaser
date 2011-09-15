@@ -1,0 +1,118 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.porecode</groupId>
+  <artifactId>servicechaser</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>servicechaser</name>
+
+<!-- 
+     * * * * * * * * * * 
+     PLUGINS
+     * * * * * * * * * * 
+-->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.googlecode.flyway</groupId>
+        <artifactId>flyway-maven-plugin</artifactId>
+        <version>1.4.2</version>
+        <configuration>
+          <driver>org.postgresql.Driver</driver>
+          <url>jdbc:postgresql://127.0.0.1:5432/servicechaser</url>
+          <user>postgres</user>
+          <password>sa</password>
+          <schemas></schemas>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+<!-- 
+     * * * * * * * * * * 
+     DEPENDENCIES
+     * * * * * * * * * * 
+-->
+
+  <dependencies>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.16</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.9</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.googlecode.flyway</groupId>
+      <artifactId>flyway-core</artifactId>
+      <version>1.4.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>9.0-801.jdbc4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>3.0.6.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>4.0.0.CR3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-annotations</artifactId>
+      <version>3.5.6-Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.code.guice</groupId>
+      <artifactId>guice</artifactId>
+      <version>3.0-r1291</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.code.guice</groupId>
+      <artifactId>guice-servlet</artifactId>
+      <version>3.0-r1291</version>
+    </dependency>
+
+  </dependencies>
+  
+  <repositories>
+    <repository>
+      <id>JBoss</id>
+      <url>http://repository.jboss.org/nexus/content/groups/public-jboss</url>
+    </repository>
+
+    <repository>
+      <id>Repo1Maven</id>
+      <url>http://repo1.maven.org/maven2</url>
+    </repository>
+    <repository>
+      <id>guice-maven</id>
+      <name>guice maven</name>
+      <url>http://guice-maven.googlecode.com/svn/trunk</url>
+    </repository>
+  </repositories>
+
+</project>

@@ -1,0 +1,10 @@
+Additional soft:
+  PostgreSQL:
+  http://www.enterprisedb.com/products-services-training/pgdownload
+
+  JBoss AS:
+  http://www.jboss.org/jbossas/downloads
+
+INFO:
+  Flyway (data migration):
+  http://code.google.com/p/flyway/
