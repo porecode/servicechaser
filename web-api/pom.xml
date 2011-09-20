@@ -17,17 +17,19 @@
     <finalName>web-api</finalName>
     <plugins>
       <plugin>
-        <!--http://codebauss.factor45.org/blog/?p=161-->
-        <groupId>org.jboss.as.plugins</groupId>
-        <artifactId>jboss-as-maven-plugin</artifactId>
-        <version>7.0.0.Final</version>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jboss-maven-plugin</artifactId>
+        <version>1.5.0</version>
         <configuration>
-          <hostname>localhost</hostname>
-          <filename>${project.build.finalName}.war</filename>
+          <jbossHome>/home/filipovskii_off/Soft/jboss-6</jbossHome>
+          <fileNames>
+            <fileName>${project.build.directory}/${project.build.finalName}.war</fileName>
+          </fileNames>
+          <serverId>jboss-6</serverId>
         </configuration>
         <executions>
           <execution>
-            <phase>deploy</phase>
+            <phase>install</phase>
             <goals>
               <goal>redeploy</goal>
             </goals>
