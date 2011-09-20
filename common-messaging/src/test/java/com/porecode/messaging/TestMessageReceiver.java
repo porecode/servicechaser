@@ -1,7 +1,7 @@
 package com.porecode.messaging;
 
 import com.porecode.messaging.exception.ReceivingFailedException;
-import com.porecode.messaging.jms.JmsReceiver;
+import com.porecode.messaging.jms.JmsMessageReceiver;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +19,7 @@ public class TestMessageReceiver {
   @Before
   public void setUp() throws Exception {
     consumer = createMock(MessageConsumer.class);
-    receiver = new JmsReceiver(consumer);
+    receiver = new JmsMessageReceiver(consumer);
   }
 
   @Test

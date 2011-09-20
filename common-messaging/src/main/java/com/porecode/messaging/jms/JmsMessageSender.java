@@ -41,6 +41,7 @@ public class JmsMessageSender implements MessageSender {
   public void send(Serializable object) throws SendingFailedException {
     if (object instanceof String) {
       send((String) object);
+      return;
     }
     try {
       producer.send(session.createObjectMessage(object));

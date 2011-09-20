@@ -14,12 +14,12 @@ import javax.jms.MessageConsumer;
  * @see <a href='http://www.ibm.com/developerworks/java/tutorials/j-jms/j-jms-updated-pdf.pdf'>
  *   Nice JMS tutorial</a>
  */
-public class JmsReceiver implements MessageReceiver {
+public class JmsMessageReceiver implements MessageReceiver {
 
   private MessageConsumer consumer;
 
   @Inject
-  public JmsReceiver(MessageConsumer consumer) {
+  public JmsMessageReceiver(MessageConsumer consumer) {
     this.consumer = consumer;
   }
 

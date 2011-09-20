@@ -34,8 +34,8 @@ public class TestMessageSender {
 
   @Before
   public void setUp() throws Throwable {
-    producer = createNiceMock(MessageProducer.class);
-    session = createNiceMock(Session.class);
+    producer = createMock(MessageProducer.class);
+    session = createMock(Session.class);
 
     Injector inj = Guice.createInjector(new TestMessagingModule());
     sender = inj.getInstance(MessageSender.class);
@@ -73,6 +73,7 @@ public class TestMessageSender {
     producer.send(anyObject(ObjectMessage.class));
     expectLastCall().andThrow(e);
     replay(producer);
+    resetToNice(session);
     replay(session);
 
     try {
