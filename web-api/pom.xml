@@ -7,34 +7,38 @@
     <groupId>com.porecode</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-
-  <groupId>com.porecode</groupId>
-  <artifactId>common-messaging</artifactId>
+  <groupId>com.porecode.servicechaser</groupId>
+  <artifactId>web-api</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>web-api Maven Webapp</name>
 
   <build>
+    <finalName>web-api</finalName>
     <plugins>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.3.2</version>
+        <!--http://codebauss.factor45.org/blog/?p=161-->
+        <groupId>org.jboss.as.plugins</groupId>
+        <artifactId>jboss-as-maven-plugin</artifactId>
+        <version>7.0.0.Final</version>
         <configuration>
-          <encoding>UTF-8</encoding>
-          <source>1.6</source>
-          <target>1.6</target>
+          <hostname>localhost</hostname>
+          <filename>${project.build.finalName}.war</filename>
         </configuration>
-      </plugin>
-
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-          <useFile>false</useFile>
-        </configuration>
+        <executions>
+          <execution>
+            <phase>deploy</phase>
+            <goals>
+              <goal>redeploy</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
-
-  <repositories>
   
+  <repositories>
+
     <repository>
       <id>JBoss</id>
       <url>http://repository.jboss.org/nexus/content/groups/public-jboss</url>
@@ -53,9 +57,24 @@
       <name>Java.net Repository for Maven</name>
       <url>http://download.java.net/maven/2/</url>
     </repository>
+
+    <repository>
+      <id>hornetq-repo</id>
+      <url>http://repository.jboss.org/maven2-brew</url>
+      <snapshots>
+        <enabled>false</enabled>
+        </snapshots>
+    </repository>
   </repositories>
-  
+
   <dependencies>
+
+    <!-- MESSAGING -->
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>jnp-client</artifactId>
+      <version>4.2.2.GA</version>
+    </dependency>
 
     <dependency>
        <groupId>org.jboss.spec</groupId>
@@ -64,6 +83,34 @@
        <type>pom</type>
        <scope>provided</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.hornetq</groupId>
+      <artifactId>hornetq-core-client</artifactId>
+      <version>2.2.7.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hornetq</groupId>
+      <artifactId>hornetq-jms-client</artifactId>
+      <version>2.2.7.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hornetq</groupId>
+      <artifactId>hornetq-jms</artifactId>
+      <version>2.2.7.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.netty</groupId>
+      <artifactId>netty</artifactId>
+      <version>3.2.0.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.porecode</groupId>
+      <artifactId>common-messaging</artifactId>
+      <version>${parent.version}</version>
+    </dependency>
+    <!-- /MESSAGING -->
     
     <dependency>
       <groupId>commons-logging</groupId>
@@ -98,16 +145,16 @@
       <version>3.0-r1291</version>
     </dependency>
     <dependency>
-      <groupId>javax.jms</groupId>
-      <artifactId>jms</artifactId>
-      <version>1.1</version>
-      <scope>provided</scope>
+      <groupId>com.google.code.guice</groupId>
+      <artifactId>guice-servlet</artifactId>
+      <version>3.0-r1291</version>
     </dependency>
+
     <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
       <version>6.0</version>
 	  </dependency>
-
   </dependencies>
+  
 </project>

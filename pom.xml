@@ -9,6 +9,7 @@
 
   <modules>
     <module>common-messaging</module>
+    <module>web-api</module>
   </modules>
 
 <!-- 

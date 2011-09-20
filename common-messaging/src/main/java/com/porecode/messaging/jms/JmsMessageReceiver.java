@@ -1,12 +1,14 @@
 package com.porecode.messaging.jms;
 
 import com.porecode.messaging.MessageReceiver;
+import com.porecode.messaging.exception.ConnectionFailedException;
 import com.porecode.messaging.exception.ReceivingFailedException;
 
 import javax.inject.Inject;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageConsumer;
+import javax.jms.MessageListener;
 
 /**
  * Jms version of MessageReceiver
@@ -23,12 +25,19 @@ public class JmsMessageReceiver implements MessageReceiver {
     this.consumer = consumer;
   }
 
-  @Override
   public Message receive() throws ReceivingFailedException {
     try {
       return consumer.receive();
     } catch (JMSException e) {
       throw new ReceivingFailedException(e);
+    }
+  }
+
+  public void setMessageListener(MessageListener listener) throws ConnectionFailedException {
+    try {
+      consumer.setMessageListener(listener);
+    } catch (JMSException e) {
+      throw new ConnectionFailedException(e);
     }
   }
 }
