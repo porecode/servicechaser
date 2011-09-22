@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram version="1.0" type="POSTGRES" versionMajor="9" versionMinor="1" groupSchema="false">
+<Table id="0" name="categories" schema="public" database="servicechaser">
+<Column id="1" name="id" type="int4" length="0" nulls="false">
+<CP name="DEFAULT_VALUE">nextval('categories_id_seq'::regclass)</CP>
+</Column>
+<Column id="2" name="title" type="varchar" length="100" nulls="false"/>
+<Column id="3" name="parent_id" type="int4" length="0" nulls="false">
+<CP name="DEFAULT_VALUE">0</CP>
+</Column>
+</Table>
+<Table id="4" name="categories_parameters" schema="public" database="servicechaser">
+<Column id="5" name="categories_id" type="int4" length="0" nulls="false"/>
+<Column id="6" name="parameters_id" type="int4" length="0" nulls="false"/>
+</Table>
+<Table id="7" name="parameter_values" schema="public" database="servicechaser">
+<Column id="8" name="id" type="int4" length="0" nulls="false">
+<CP name="DEFAULT_VALUE">nextval('parameter_values_id_seq'::regclass)</CP>
+</Column>
+<Column id="9" name="int_value" type="int4" length="0" nulls="true"/>
+<Column id="10" name="text_value" type="varchar" length="20" nulls="true"/>
+<Column id="11" name="parameters_id" type="int4" length="0" nulls="true"/>
+</Table>
+<Table id="12" name="parameter_values_services" schema="public" database="servicechaser">
+<Column id="13" name="parameter_values_id" type="int4" length="0" nulls="false"/>
+<Column id="14" name="services_id" type="int4" length="0" nulls="false"/>
+</Table>
+<Table id="15" name="parameters" schema="public" database="servicechaser">
+<Column id="16" name="id" type="int4" length="0" nulls="false">
+<CP name="DEFAULT_VALUE">nextval('parameters_id_seq'::regclass)</CP>
+</Column>
+<Column id="17" name="title" type="varchar" length="100" nulls="false"/>
+<Column id="18" name="kind" type="varchar" length="10" nulls="false">
+<CP name="DEFAULT_VALUE">'data_span'::character varying</CP>
+</Column>
+<Column id="19" name="description" type="text" length="0" nulls="false"/>
+</Table>
+<Table id="20" name="producers" schema="public" database="servicechaser">
+<Column id="21" name="id" type="int4" length="0" nulls="false">
+<CP name="DEFAULT_VALUE">nextval('producers_id_seq'::regclass)</CP>
+</Column>
+<Column id="22" name="title" type="varchar" length="100" nulls="false"/>
+</Table>
+<Table id="23" name="producers_services" schema="public" database="servicechaser">
+<Column id="24" name="producers_id" type="int4" length="0" nulls="false"/>
+<Column id="25" name="services_id" type="int4" length="0" nulls="false"/>
+</Table>
+<Table id="26" name="services" schema="public" database="servicechaser">
+<Column id="27" name="id" type="int4" length="0" nulls="false">
+<CP name="DEFAULT_VALUE">nextval('services_id_seq'::regclass)</CP>
+</Column>
+<Column id="28" name="title" type="varchar" length="100" nulls="false"/>
+<Column id="29" name="category_id" type="int4" length="0" nulls="false"/>
+</Table>
+<Relation id="30" name="categories_parameters_id_fkey" cardinality="-2" identifying="false" nulls="false">
+<Option name="initially" class="String" value="IMMEDIATE"/>
+<Option name="deferrable" class="Boolean" value="false"/>
+<Option name="match" class="String" value="SIMPLE"/>
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value="NO ACTION"/>
+<FK>16</FK>
+<PK>6</PK>
+</Relation>
+<Relation id="31" name="categories_parameters_categories_id_fkey" cardinality="-2" identifying="false" nulls="false">
+<Option name="initially" class="String" value="IMMEDIATE"/>
+<Option name="deferrable" class="Boolean" value="false"/>
+<Option name="match" class="String" value="SIMPLE"/>
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value="NO ACTION"/>
+<FK>1</FK>
+<PK>5</PK>
+</Relation>
+<Relation id="32" name="parameter_values_parameter_id_fkey" cardinality="-2" identifying="false" nulls="false">
+<Option name="initially" class="String" value="IMMEDIATE"/>
+<Option name="deferrable" class="Boolean" value="false"/>
+<Option name="match" class="String" value="SIMPLE"/>
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value="NO ACTION"/>
+<FK>16</FK>
+<PK>11</PK>
+</Relation>
+<Relation id="33" name="parameter_values_services_services_id_fkey" cardinality="-2" identifying="false" nulls="false">
+<Option name="initially" class="String" value="IMMEDIATE"/>
+<Option name="deferrable" class="Boolean" value="false"/>
+<Option name="match" class="String" value="SIMPLE"/>
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value="NO ACTION"/>
+<FK>27</FK>
+<PK>14</PK>
+</Relation>
+<Relation id="34" name="parameter_values_services_parameter_values_id_fkey" cardinality="-2" identifying="false" nulls="false">
+<Option name="initially" class="String" value="IMMEDIATE"/>
+<Option name="deferrable" class="Boolean" value="false"/>
+<Option name="match" class="String" value="SIMPLE"/>
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value="NO ACTION"/>
+<FK>8</FK>
+<PK>13</PK>
+</Relation>
+<Relation id="35" name="producers_services_services_id_fkey" cardinality="-2" identifying="false" nulls="false">
+<Option name="initially" class="String" value="IMMEDIATE"/>
+<Option name="deferrable" class="Boolean" value="false"/>
+<Option name="match" class="String" value="SIMPLE"/>
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value="NO ACTION"/>
+<FK>27</FK>
+<PK>25</PK>
+</Relation>
+<Relation id="36" name="producers_services_producers_id_fkey" cardinality="-2" identifying="false" nulls="false">
+<Option name="initially" class="String" value="IMMEDIATE"/>
+<Option name="deferrable" class="Boolean" value="false"/>
+<Option name="match" class="String" value="SIMPLE"/>
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value="NO ACTION"/>
+<FK>21</FK>
+<PK>24</PK>
+</Relation>
+<Relation id="37" name="services_category_id_fkey" cardinality="-2" identifying="false" nulls="false">
+<Option name="initially" class="String" value="IMMEDIATE"/>
+<Option name="deferrable" class="Boolean" value="false"/>
+<Option name="match" class="String" value="SIMPLE"/>
+<Option name="onDelete" class="String" value="CASCADE"/>
+<Option name="onUpdate" class="String" value="NO ACTION"/>
+<FK>1</FK>
+<PK>29</PK>
+</Relation>
+<Constraint table="0" name="categories_id_pkey" type="PrimKey">
+<Option name="tablespace" class="String" value="&lt;DEFAULT&gt;"/>
+<ConstraintColumn id="1"/>
+</Constraint>
+<Constraint table="4" name="categories_parameters_pkey" type="PrimKey">
+<Option name="tablespace" class="String" value="&lt;DEFAULT&gt;"/>
+<ConstraintColumn id="5"/>
+<ConstraintColumn id="6"/>
+</Constraint>
+<Constraint table="7" name="parameter_values_id" type="PrimKey">
+<Option name="tablespace" class="String" value="&lt;DEFAULT&gt;"/>
+<ConstraintColumn id="8"/>
+</Constraint>
+<Constraint table="12" name="parameter_values_services_pkey" type="PrimKey">
+<Option name="tablespace" class="String" value="&lt;DEFAULT&gt;"/>
+<ConstraintColumn id="13"/>
+<ConstraintColumn id="14"/>
+</Constraint>
+<Constraint table="15" name="parameters_id_pkey" type="PrimKey">
+<Option name="tablespace" class="String" value="&lt;DEFAULT&gt;"/>
+<ConstraintColumn id="16"/>
+</Constraint>
+<Constraint table="15" name="parameters_kind_check" type="Check" condition="((kind)::text = ANY (ARRAY[('radio'::character varying)::text, ('check_box'::character varying)::text, ('data_span'::character varying)::text]))"/>
+<Constraint table="20" name="producers_id_pkey" type="PrimKey">
+<Option name="tablespace" class="String" value="&lt;DEFAULT&gt;"/>
+<ConstraintColumn id="21"/>
+</Constraint>
+<Constraint table="23" name="producers_services_pkey" type="PrimKey">
+<Option name="tablespace" class="String" value="&lt;DEFAULT&gt;"/>
+<ConstraintColumn id="24"/>
+<ConstraintColumn id="25"/>
+</Constraint>
+<Constraint table="26" name="services_id_pkey" type="PrimKey">
+<Option name="tablespace" class="String" value="&lt;DEFAULT&gt;"/>
+<ConstraintColumn id="27"/>
+</Constraint>
+<Sheet name="localhost.servicechaser" id="38" disp_at="true" disp_ph="true" disp_co="true">
+<Place id="0" visible="true">2,1,150,80</Place>
+<Place id="37" visible="true">500,0,0,0</Place>
+<Place id="30" visible="true" options="423.0,1.0,150.0,90.0,193.0,1.0,160.0,60.0,4,423.0,40.0,374.0,40.0,374.0,50.0,353.0,50.0">0,2,50,0</Place>
+<Place id="33" visible="true" options="2.0,110.0,150.0,80.0,193.0,110.0,200.0,60.0,4,152.0,140.0,177.0,140.0,177.0,150.0,193.0,150.0">500,0,0,0</Place>
+<Place id="34" visible="true" options="423.0,110.0,180.0,90.0,193.0,110.0,200.0,60.0,2,423.0,140.0,393.0,140.0">500,0,0,0</Place>
+<Place id="20" visible="true">423,210,150,60</Place>
+<Place id="15" visible="true">423,1,150,90</Place>
+<Place id="4" visible="true">193,1,160,60</Place>
+<Place id="23" visible="true">193,190,160,60</Place>
+<Place id="26" visible="true">2,110,150,80</Place>
+<Place id="35" visible="true" options="2.0,110.0,150.0,80.0,193.0,190.0,160.0,60.0,4,152.0,140.0,170.0,140.0,170.0,230.0,193.0,230.0">500,0,0,0</Place>
+<Place id="31" visible="true" options="2.0,1.0,150.0,80.0,193.0,1.0,160.0,60.0,2,152.0,30.0,193.0,30.0">0,35,-67,0</Place>
+<Place id="7" visible="true">423,110,180,90</Place>
+<Place id="32" visible="true" options="423.0,1.0,150.0,90.0,423.0,110.0,180.0,90.0,4,573.0,40.0,610.0,40.0,610.0,190.0,603.0,190.0">500,0,0,0</Place>
+<Place id="12" visible="true">193,110,200,60</Place>
+<Place id="36" visible="true" options="423.0,210.0,150.0,60.0,193.0,190.0,160.0,60.0,4,423.0,240.0,390.0,240.0,390.0,220.0,353.0,220.0">500,0,0,0</Place>
+</Sheet>
+<Settings sheet="38" zoom="2.0"/>
+</Diagram>

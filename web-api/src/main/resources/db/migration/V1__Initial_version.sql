@@ -1,14 +1,16 @@
-﻿/*
-DROP TABLE IF EXISTS parameter_values_services;
-DROP TABLE IF EXISTS categories_parameters;
-DROP TABLE IF EXISTS parameter_values;
-DROP TABLE IF EXISTS producers_services;
-DROP TABLE IF EXISTS parameters;
-DROP TABLE IF EXISTS producers;
-DROP TABLE IF EXISTS services;
-DROP TABLE IF EXISTS categories;
-*/
---DROP TABLE IF EXISTS categories
+
+-- DROP TABLE IF EXISTS parameter_values_services;
+-- DROP TABLE IF EXISTS categories_parameters;
+-- DROP TABLE IF EXISTS parameter_values;
+-- DROP TABLE IF EXISTS producers_services;
+-- DROP TABLE IF EXISTS parameters;
+-- DROP TABLE IF EXISTS producers;
+-- DROP TABLE IF EXISTS services;
+-- DROP TABLE IF EXISTS categories;
+
+
+-- DROP TABLE IF EXISTS categories;
+
 CREATE TABLE IF NOT EXISTS categories
 (
     id                  SERIAL,
@@ -17,7 +19,9 @@ CREATE TABLE IF NOT EXISTS categories
     CONSTRAINT  categories_id_pkey
         PRIMARY KEY (id)
 );
---DROP TABLE IF EXISTS services
+
+-- DROP TABLE IF EXISTS services;
+
 CREATE TABLE IF NOT EXISTS services
 (
     id                  SERIAL,
@@ -31,7 +35,9 @@ CREATE TABLE IF NOT EXISTS services
         ON UPDATE NO ACTION
         ON DELETE CASCADE
 );
---DROP TABLE IF EXISTS producers
+
+-- DROP TABLE IF EXISTS producers;
+
 CREATE TABLE IF NOT EXISTS producers
 (
     id                  SERIAL,
@@ -39,7 +45,9 @@ CREATE TABLE IF NOT EXISTS producers
     CONSTRAINT  producers_id_pkey
         PRIMARY KEY (id)
 );
---DROP TABLE IF EXISTS parameters
+
+-- DROP TABLE IF EXISTS parameters;
+
 CREATE TABLE IF NOT EXISTS parameters
 (
     id                  SERIAL,
@@ -55,16 +63,26 @@ CREATE TABLE IF NOT EXISTS parameters
                     'data_span'::character varying]::text[])
               )
 );
---DROP TABLE IF EXISTS parameter_values
+
+-- DROP TABLE IF EXISTS parameter_values;
+
 CREATE TABLE IF NOT EXISTS parameter_values
 (
     id                  SERIAL,
     int_value           integer                     NULL,
     text_value          character varying(20)       NULL,
+    parameters_id       integer                     NULL,
     CONSTRAINT  parameter_values_id
-        PRIMARY KEY (id)
+        PRIMARY KEY (id),
+    CONSTRAINT  parameter_values_parameter_id_fkey
+        FOREIGN KEY (parameters_id)
+        REFERENCES parameters (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
 );
---DROP TABLE IF EXISTS producers_services
+
+-- DROP TABLE IF EXISTS producers_services;
+
 CREATE TABLE IF NOT EXISTS producers_services
 (
     producers_id        integer                     NOT NULL,
@@ -82,7 +100,9 @@ CREATE TABLE IF NOT EXISTS producers_services
         ON UPDATE NO ACTION
         ON DELETE CASCADE
 );
---DROP TABLE IF EXISTS categories_parameters
+
+-- DROP TABLE IF EXISTS categories_parameters;
+
 CREATE TABLE IF NOT EXISTS categories_parameters
 (
     categories_id       integer                     NOT NULL,
@@ -100,7 +120,9 @@ CREATE TABLE IF NOT EXISTS categories_parameters
         ON UPDATE NO ACTION
         ON DELETE CASCADE
 );
---DROP TABLE IF EXISTS parameter_values_services
+
+-- DROP TABLE IF EXISTS parameter_values_services;
+
 CREATE TABLE IF NOT EXISTS parameter_values_services
 (
     parameter_values_id integer                     NOT NULL,
