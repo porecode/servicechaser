@@ -29,7 +29,7 @@ public class Producer {
             inverseJoinColumns =
             @JoinColumn(name = "service_id", referencedColumnName = "id")
     )
-    private Set services = new HashSet();
+    private Set<Service> services = new HashSet<Service>();
 
     public Producer() {
     }
@@ -48,5 +48,13 @@ public class Producer {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Set<Service> getServices() {
+        return services;
+    }
+
+    public void setServices(Set<Service> services) {
+        this.services = services;
     }
 }
