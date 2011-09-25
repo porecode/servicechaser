@@ -32,6 +32,15 @@ public class Service {
     )
     private Set<Producer> producers = new HashSet<Producer>();
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "parameter_values_services",
+            joinColumns =
+            @JoinColumn(name = "service_id", referencedColumnName = "id"),
+            inverseJoinColumns =
+            @JoinColumn(name = "parameter_value_id", referencedColumnName = "id")
+    )
+    private Set<ParameterValue> parameterValues = new HashSet<ParameterValue>();
+
     public Service() {
     }
 
@@ -39,7 +48,7 @@ public class Service {
         return id;
     }
 
-    public void setId(Long id) {
+    private void setId(Long id) {
         this.id = id;
     }
 

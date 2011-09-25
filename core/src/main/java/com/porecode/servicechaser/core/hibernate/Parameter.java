@@ -38,7 +38,7 @@ public class Parameter {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "parameter_values",
             joinColumns = {@JoinColumn(name = "id", referencedColumnName = "parameter_id")})
-    private Set parameter_values = new HashSet();
+    private Set<ParameterValue> parameter_values = new HashSet<ParameterValue>();
 
     public Parameter() {
     }
@@ -47,7 +47,7 @@ public class Parameter {
         return id;
     }
 
-    public void setId(Long id) {
+    private void setId(Long id) {
         this.id = id;
     }
 
@@ -83,11 +83,11 @@ public class Parameter {
         this.categories = categories;
     }
 
-    public Set getParameter_values() {
+    public Set<ParameterValue> getParameter_values() {
         return parameter_values;
     }
 
-    public void setParameter_values(Set parameter_values) {
+    public void setParameter_values(Set<ParameterValue> parameter_values) {
         this.parameter_values = parameter_values;
     }
 }
