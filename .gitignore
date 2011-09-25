@@ -3,3 +3,5 @@
 target/
 .DS_Store
 servicechaser.ipr
+servicechaser.iws
+servicechaser.iml
