@@ -20,8 +20,8 @@ public class Service {
     @Column(length = 100, nullable = false)
     private String title;
 
-//    @ManyToOne(cascade = CascadeType.ALL)
-//    private Category category;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Category category;
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "producers_services",
@@ -31,4 +31,39 @@ public class Service {
             @JoinColumn(name = "producer_id", referencedColumnName = "id")
     )
     private Set producers = new HashSet();
+
+    public Service() {
+    }
+
+    private Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public Set getProducers() {
+        return producers;
+    }
+
+    public void setProducers(Set producers) {
+        this.producers = producers;
+    }
 }
