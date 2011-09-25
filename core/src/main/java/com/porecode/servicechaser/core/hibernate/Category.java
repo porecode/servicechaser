@@ -26,7 +26,7 @@ public class Category {
             inverseJoinColumns =
             @JoinColumn(name = "parameter_id", referencedColumnName = "id")
     )
-    private Set parameters = new HashSet();
+    private Set<Parameter> parameters = new HashSet<Parameter>();
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "services",
@@ -44,7 +44,7 @@ public class Category {
         return title;
     }
 
-    public Set getParameters() {
+    public Set<Parameter> getParameters() {
         return parameters;
     }
 
@@ -60,7 +60,7 @@ public class Category {
         this.title = title;
     }
 
-    public void setParameters(Set parameters) {
+    public void setParameters(Set<Parameter> parameters) {
         this.parameters = parameters;
     }
 

@@ -29,6 +29,7 @@
         <mapping class="com.porecode.servicechaser.core.hibernate.Producer" />
         <mapping class="com.porecode.servicechaser.core.hibernate.Service" />
         <mapping class="com.porecode.servicechaser.core.hibernate.Category" />
+        <mapping class="com.porecode.servicechaser.core.hibernate.Parameter" />
 
     </session-factory>
 

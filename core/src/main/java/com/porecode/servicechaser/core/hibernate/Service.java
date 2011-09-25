@@ -30,7 +30,7 @@ public class Service {
             inverseJoinColumns =
             @JoinColumn(name = "producer_id", referencedColumnName = "id")
     )
-    private Set producers = new HashSet();
+    private Set<Producer> producers = new HashSet<Producer>();
 
     public Service() {
     }
@@ -59,11 +59,11 @@ public class Service {
         this.category = category;
     }
 
-    public Set getProducers() {
+    public Set<Producer> getProducers() {
         return producers;
     }
 
-    public void setProducers(Set producers) {
+    public void setProducers(Set<Producer> producers) {
         this.producers = producers;
     }
 }
