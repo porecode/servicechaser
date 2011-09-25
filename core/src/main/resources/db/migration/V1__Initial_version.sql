@@ -8,7 +8,6 @@
 -- DROP TABLE IF EXISTS services;
 -- DROP TABLE IF EXISTS categories;
 
-
 -- DROP TABLE IF EXISTS categories;
 
 CREATE TABLE IF NOT EXISTS categories
@@ -71,11 +70,11 @@ CREATE TABLE IF NOT EXISTS parameter_values
     id                  SERIAL,
     int_value           integer                     NULL,
     text_value          character varying(20)       NULL,
-    parameters_id       integer                     NULL,
+    parameter_id        integer                     NOT NULL,
     CONSTRAINT  parameter_values_id
         PRIMARY KEY (id),
     CONSTRAINT  parameter_values_parameter_id_fkey
-        FOREIGN KEY (parameters_id)
+        FOREIGN KEY (parameter_id)
         REFERENCES parameters (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE CASCADE
@@ -85,17 +84,17 @@ CREATE TABLE IF NOT EXISTS parameter_values
 
 CREATE TABLE IF NOT EXISTS producers_services
 (
-    producers_id        integer                     NOT NULL,
-    services_id         integer                     NOT NULL,
+    producer_id         integer                     NOT NULL,
+    service_id          integer                     NOT NULL,
     CONSTRAINT  producers_services_pkey
-        PRIMARY KEY (producers_id, services_id),
-    CONSTRAINT  producers_services_producers_id_fkey
-        FOREIGN KEY (producers_id)
+        PRIMARY KEY (producer_id, service_id),
+    CONSTRAINT  producers_services_producer_id_fkey
+        FOREIGN KEY (producer_id)
         REFERENCES producers (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE CASCADE,
-    CONSTRAINT  producers_services_services_id_fkey
-        FOREIGN KEY (services_id)
+    CONSTRAINT  producers_services_service_id_fkey
+        FOREIGN KEY (service_id)
         REFERENCES services (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE CASCADE
@@ -105,17 +104,17 @@ CREATE TABLE IF NOT EXISTS producers_services
 
 CREATE TABLE IF NOT EXISTS categories_parameters
 (
-    categories_id       integer                     NOT NULL,
-    parameters_id       integer                     NOT NULL,
+    category_id         integer                     NOT NULL,
+    parameter_id        integer                     NOT NULL,
     CONSTRAINT  categories_parameters_pkey
-        PRIMARY KEY (categories_id, parameters_id),
-    CONSTRAINT  categories_parameters_categories_id_fkey
-        FOREIGN KEY (categories_id)
+        PRIMARY KEY (category_id, parameter_id),
+    CONSTRAINT  categories_parameters_category_id_fkey
+        FOREIGN KEY (category_id)
         REFERENCES categories (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE CASCADE,
-    CONSTRAINT  categories_parameters_id_fkey
-        FOREIGN KEY (parameters_id)
+    CONSTRAINT  categories_parameters_parameter_id_fkey
+        FOREIGN KEY (parameter_id)
         REFERENCES parameters (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE CASCADE
@@ -125,17 +124,17 @@ CREATE TABLE IF NOT EXISTS categories_parameters
 
 CREATE TABLE IF NOT EXISTS parameter_values_services
 (
-    parameter_values_id integer                     NOT NULL,
-    services_id         integer                     NOT NULL,
+    parameter_value_id  integer                     NOT NULL,
+    service_id          integer                     NOT NULL,
     CONSTRAINT  parameter_values_services_pkey
-        PRIMARY KEY (parameter_values_id, services_id),
-    CONSTRAINT  parameter_values_services_parameter_values_id_fkey
-        FOREIGN KEY (parameter_values_id)
+        PRIMARY KEY (parameter_value_id, service_id),
+    CONSTRAINT  parameter_values_services_parameter_value_id_fkey
+        FOREIGN KEY (parameter_value_id)
         REFERENCES parameter_values (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE CASCADE,
-    CONSTRAINT  parameter_values_services_services_id_fkey
-        FOREIGN KEY (services_id)
+    CONSTRAINT  parameter_values_services_service_id_fkey
+        FOREIGN KEY (service_id)
         REFERENCES services (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE CASCADE
