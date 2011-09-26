@@ -19,6 +19,15 @@ public class Category {
     @Column(length = 100, nullable = false)
     private String title;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    @Column(nullable=false)
+    @JoinColumn(name="parent_id")
+    private Set<Category> children = new HashSet<Category>();
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @Column(name="parent_id", nullable=false)
+    private Category parent;
+
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "categories_parameters",
             joinColumns =
