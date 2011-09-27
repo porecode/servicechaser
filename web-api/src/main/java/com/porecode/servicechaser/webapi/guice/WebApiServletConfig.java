@@ -16,7 +16,6 @@ public class WebApiServletConfig extends GuiceServletContextListener {
   protected Injector getInjector() {
     return Guice.createInjector(
         new CommonMessagingModule(),
-        new WebApiMessagingModule(),
         new ServletModule() {
 
       @Override

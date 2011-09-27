@@ -6,5 +6,5 @@ package com.porecode.servicechaser.core.hibernate;
  * Date: 26.09.11
  */
 public enum Kind {
-    radio, check_box, data_span
+    RADIO, CHECK_BOX, DATA_SPAN
 }

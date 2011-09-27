@@ -11,6 +11,7 @@
     <module>common-messaging</module>
     <module>web-api</module>
     <module>core</module>
+    <module>common-rpc</module>
   </modules>
 
 <!-- 
@@ -64,6 +65,12 @@
       <groupId>commons-logging</groupId>
       <artifactId>commons-logging</artifactId>
       <version>1.1.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.0.1</version>
     </dependency>
 
     <dependency>

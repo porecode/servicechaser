@@ -1,4 +1,4 @@
-package com.porecode.servicechaser.webapi.guice;
+package com.porecode.messaging.guice;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
@@ -9,7 +9,7 @@ import javax.inject.Singleton;
 import javax.jms.*;
 import javax.naming.InitialContext;
 
-public class WebApiMessagingModule extends AbstractModule {
+public class JmsMessagingModule extends AbstractModule {
 
   @Override
   protected void configure() {

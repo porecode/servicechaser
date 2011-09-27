@@ -17,10 +17,10 @@ public class ParameterValue {
     private Long id;
 
     @Column(length = 20, nullable = true)
-    private String text_value;
+    private String textValue;
 
     @Column(nullable = true)
-    private Long int_value;
+    private Long intValue;
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "parameter_values_services",
@@ -46,19 +46,19 @@ public class ParameterValue {
     }
 
     public String getText_value() {
-        return text_value;
+        return textValue;
     }
 
-    public void setText_value(String text_value) {
-        this.text_value = text_value;
+    public void setText_value(String textValue) {
+        this.textValue = textValue;
     }
 
     public Long getInt_value() {
-        return int_value;
+        return intValue;
     }
 
-    public void setInt_value(Long int_value) {
-        this.int_value = int_value;
+    public void setInt_value(Long intValue) {
+        this.intValue = intValue;
     }
 
     public Set<Service> getServices() {
