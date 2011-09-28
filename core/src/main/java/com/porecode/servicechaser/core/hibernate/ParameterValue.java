@@ -14,13 +14,13 @@ import java.util.Set;
 public class ParameterValue {
     @Id
     @GeneratedValue
-    private Long id;
+    private Long id = -1L;
 
-    @Column(length = 20, nullable = true)
-    private String textValue;
+    @Column(length = 20, nullable = true, name = "text_value")
+    private String textValue = "";
 
-    @Column(nullable = true)
-    private Long intValue;
+    @Column(nullable = true, name = "int_value")
+    private Long intValue = 0L;
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "parameter_values_services",
@@ -45,23 +45,23 @@ public class ParameterValue {
         this.id = id;
     }
 
-    public String getText_value() {
-        return textValue;
-    }
+  public String getTextValue() {
+    return textValue;
+  }
 
-    public void setText_value(String textValue) {
-        this.textValue = textValue;
-    }
+  public void setTextValue(String textValue) {
+    this.textValue = textValue;
+  }
 
-    public Long getInt_value() {
-        return intValue;
-    }
+  public Long getIntValue() {
+    return intValue;
+  }
 
-    public void setInt_value(Long intValue) {
-        this.intValue = intValue;
-    }
+  public void setIntValue(Long intValue) {
+    this.intValue = intValue;
+  }
 
-    public Set<Service> getServices() {
+  public Set<Service> getServices() {
         return services;
     }
 
