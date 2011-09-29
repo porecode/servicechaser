@@ -14,13 +14,13 @@ import java.util.Set;
 public class ParameterValue {
     @Id
     @GeneratedValue
-    private Long id = -1L;
+    private Long id; 
 
     @Column(length = 20, nullable = true, name = "text_value")
-    private String textValue = "";
+    private String textValue;
 
     @Column(nullable = true, name = "int_value")
-    private Long intValue = 0L;
+    private Long intValue; 
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "parameter_values_services",
