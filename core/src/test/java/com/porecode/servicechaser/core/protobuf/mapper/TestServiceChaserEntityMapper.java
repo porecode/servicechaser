@@ -18,7 +18,7 @@ public class TestServiceChaserEntityMapper {
   private Long intValue = 3L;
 
   @Test
-  public void testEntityToMessageMapping() throws Exception {
+  public void testParamterValueToMessageMapping() throws Exception {
     ParameterValue entity = new ParameterValue();
     entity.setIntValue(intValue);
     entity.setTextValue(strValue);
@@ -30,7 +30,7 @@ public class TestServiceChaserEntityMapper {
   }
 
   @Test
-  public void testNullEntityFields() throws Exception {
+  public void testNullParameterValueFields() throws Exception {
     ParameterValue entity = new ParameterValue();
     EntityProtos.ParameterValue message =
       ServiceChaserEntityMapper.parameterValueToMessage(entity);
@@ -41,7 +41,7 @@ public class TestServiceChaserEntityMapper {
   }
 
   @Test
-  public void testMessageToEntity() throws Exception {
+  public void testMessageToParameterValue() throws Exception {
     EntityProtos.ParameterValue.Builder builder =
         EntityProtos.ParameterValue.newBuilder();
     builder.setId(intValue);
