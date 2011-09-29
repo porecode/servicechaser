@@ -30,7 +30,7 @@ message Service {
   optional string title = 2;
   optional Category category = 3;
   repeated Producer producers = 4;
-  repeated ParameterValue parameterValues = 5;
+  repeated ParameterValue parameter_values = 5;
 }
 
 message ParameterValue {

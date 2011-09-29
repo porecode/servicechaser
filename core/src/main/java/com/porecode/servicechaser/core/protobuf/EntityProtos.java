@@ -2572,7 +2572,7 @@ public final class EntityProtos {
     com.porecode.servicechaser.core.protobuf.EntityProtos.ProducerOrBuilder getProducersOrBuilder(
         int index);
     
-    // repeated .servicechaser.core.ParameterValue parameterValues = 5;
+    // repeated .servicechaser.core.ParameterValue parameter_values = 5;
     java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue> 
         getParameterValuesList();
     com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue getParameterValues(int index);
@@ -2687,8 +2687,8 @@ public final class EntityProtos {
       return producers_.get(index);
     }
     
-    // repeated .servicechaser.core.ParameterValue parameterValues = 5;
-    public static final int PARAMETERVALUES_FIELD_NUMBER = 5;
+    // repeated .servicechaser.core.ParameterValue parameter_values = 5;
+    public static final int PARAMETER_VALUES_FIELD_NUMBER = 5;
     private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue> parameterValues_;
     public java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue> getParameterValuesList() {
       return parameterValues_;
@@ -3470,7 +3470,7 @@ public final class EntityProtos {
         return producersBuilder_;
       }
       
-      // repeated .servicechaser.core.ParameterValue parameterValues = 5;
+      // repeated .servicechaser.core.ParameterValue parameter_values = 5;
       private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue> parameterValues_ =
         java.util.Collections.emptyList();
       private void ensureParameterValuesIsMutable() {
@@ -4908,17 +4908,17 @@ public final class EntityProtos {
       "core.Category\022<\n\020parameter_values\030\006 \003(\0132" +
       "\".servicechaser.core.ParameterValue\"/\n\004K" +
       "ind\022\t\n\005RADIO\020\000\022\r\n\tCHECK_BOX\020\001\022\r\n\tDATA_SP" +
-      "AN\020\002\"\302\001\n\007Service\022\n\n\002id\030\001 \001(\003\022\r\n\005title\030\002 " +
+      "AN\020\002\"\303\001\n\007Service\022\n\n\002id\030\001 \001(\003\022\r\n\005title\030\002 " +
       "\001(\t\022.\n\010category\030\003 \001(\0132\034.servicechaser.co" +
       "re.Category\022/\n\tproducers\030\004 \003(\0132\034.service" +
-      "chaser.core.Producer\022;\n\017parameterValues\030" +
-      "\005 \003(\0132\".servicechaser.core.ParameterValu" +
-      "e\"C\n\016ParameterValue\022\n\n\002id\030\001 \001(\003\022\022\n\ntext_" +
-      "value\030\002 \001(\t\022\021\n\tint_value\030\003 \001(\003\"T\n\010Produc",
-      "er\022\n\n\002id\030\001 \001(\003\022\r\n\005title\030\002 \001(\t\022-\n\010service" +
-      "s\030\003 \003(\0132\033.servicechaser.core.ServiceB8\n(" +
-      "com.porecode.servicechaser.core.protobuf" +
-      "B\014EntityProtos"
+      "chaser.core.Producer\022<\n\020parameter_values" +
+      "\030\005 \003(\0132\".servicechaser.core.ParameterVal" +
+      "ue\"C\n\016ParameterValue\022\n\n\002id\030\001 \001(\003\022\022\n\ntext" +
+      "_value\030\002 \001(\t\022\021\n\tint_value\030\003 \001(\003\"T\n\010Produ",
+      "cer\022\n\n\002id\030\001 \001(\003\022\r\n\005title\030\002 \001(\t\022-\n\010servic" +
+      "es\030\003 \003(\0132\033.servicechaser.core.ServiceB8\n" +
+      "(com.porecode.servicechaser.core.protobu" +
+      "fB\014EntityProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

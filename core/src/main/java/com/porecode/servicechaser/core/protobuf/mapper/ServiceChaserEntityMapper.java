@@ -1,7 +1,5 @@
 package com.porecode.servicechaser.core.protobuf.mapper;
 
-import com.google.protobuf.Descriptors;
-import com.google.protobuf.Message;
 import com.porecode.servicechaser.core.hibernate.ParameterValue;
 import com.porecode.servicechaser.core.protobuf.EntityProtos;
 
@@ -13,7 +11,11 @@ import com.porecode.servicechaser.core.protobuf.EntityProtos;
  * Date: 28.09.11
  * Time: 21:09
  */
-public class ServiceChaserEntityMapper {
+public final class ServiceChaserEntityMapper {
+
+  private static final String ID_FIELD = "id";
+  private static final String INT_VALUE_FIELD = "int_value";
+  private static final String TEXT_VALUE_FIELD = "text_value";
 
   /**
    * Converts {@link ParameterValue} entity to protobuf message
@@ -28,9 +30,12 @@ public class ServiceChaserEntityMapper {
 
     EntityProtos.ParameterValue.Builder messageBuilder =
         EntityProtos.ParameterValue.newBuilder();
-    setOptionalField(messageBuilder, "id", entity.getId());
-    setOptionalField(messageBuilder, "int_value", entity.getIntValue());
-    setOptionalField(messageBuilder, "text_value", entity.getTextValue());
+    CommonFunctions.setOptionalField(
+        messageBuilder, ID_FIELD, entity.getId());
+    CommonFunctions.setOptionalField(
+        messageBuilder, INT_VALUE_FIELD, entity.getIntValue());
+    CommonFunctions.setOptionalField(
+        messageBuilder, TEXT_VALUE_FIELD, entity.getTextValue());
     return messageBuilder.build();
   }
 
@@ -46,20 +51,5 @@ public class ServiceChaserEntityMapper {
     return entity;
   }
 
-  private static void setOptionalField(
-      Message.Builder builder, String fieldName, Object value) {
-    Descriptors.Descriptor d = builder.getDescriptorForType();
-    try {
-      if (value != null) {
-        builder.setField(d.findFieldByName(fieldName), value);
-      }
-    } catch (NullPointerException e) {
-      throw new IllegalStateException(
-          String.format(
-            "Field with name [%s] doesn't exist in message type [%s]", 
-            fieldName, d.getName()),
-          e);
-    }
-  }
   
 }
