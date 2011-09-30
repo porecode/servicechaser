@@ -28,6 +28,7 @@
                 <exec executable="protoc">
                   <arg value="--java_out=src/main/java" />
                   <arg value="src/main/resources/protobuf/core-entities.proto" />
+                  <arg value="src/main/resources/protobuf/core-services.proto" />
                 </exec>
               </tasks>
               <sourceRoot>src/main/java</sourceRoot>
@@ -41,10 +42,17 @@
     </plugins>
   </build>
   <dependencies>
+
     <dependency>
         <groupId>com.google.protobuf</groupId>
         <artifactId>protobuf-java</artifactId>
         <version>2.4.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.googlecode.protobuf</groupId>
+      <artifactId>socketrpc</artifactId>
+      <version>2.0</version>
     </dependency>
   </dependencies>
 </project>

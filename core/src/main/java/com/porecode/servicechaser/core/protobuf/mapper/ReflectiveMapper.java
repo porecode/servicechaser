@@ -32,16 +32,21 @@ public final class ReflectiveMapper {
    * @warning not tested with <b>repeated</b> message fields
    */
   public static <T extends Message.Builder> T toMessageBuilder(
-      Object entity, T builder)
-      throws IllegalAccessException, InvocationTargetException {
+      Object entity, T builder) {
 
     for (Method m : entity.getClass().getMethods()) {
       // all 'get'-methods
       if (m.getName().startsWith(GET)) {
         String varName = convertFromCamel(
             StringUtils.replaceOnce(m.getName(), GET, StringUtils.EMPTY));
+
+        Object entityFieldValue = null;
+        try {
+          entityFieldValue = m.invoke(entity);
+        } catch (Exception e) {
+        }
         CommonFunctions.setOptionalField(
-            builder, varName, m.invoke(entity), true);
+            builder, varName, entityFieldValue, true);
       }
     }
 

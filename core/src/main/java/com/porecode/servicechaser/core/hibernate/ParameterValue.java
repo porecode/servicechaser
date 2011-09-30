@@ -12,38 +12,44 @@ import java.util.Set;
 @Entity
 @Table(name = "parameter_values")
 public class ParameterValue {
-    @Id
-    @GeneratedValue
-    private Long id; 
+  @Id
+  @GeneratedValue
+  private Long id;
 
-    @Column(length = 20, nullable = true, name = "text_value")
-    private String textValue;
+  @Column(length = 20, nullable = true, name = "text_value")
+  private String textValue;
 
-    @Column(nullable = true, name = "int_value")
-    private Long intValue; 
+  @Column(nullable = true, name = "int_value")
+  private Long intValue;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "parameter_values_services",
-            joinColumns =
-            @JoinColumn(name = "parameter_value_id", referencedColumnName = "id"),
-            inverseJoinColumns =
-            @JoinColumn(name = "service_id", referencedColumnName = "id")
-    )
-    private Set<Service> services = new HashSet<Service>();
+  @ManyToMany(cascade = CascadeType.ALL)
+  @JoinTable(name = "parameter_values_services",
+      joinColumns =
+      @JoinColumn(name = "parameter_value_id", referencedColumnName = "id"),
+      inverseJoinColumns =
+      @JoinColumn(name = "service_id", referencedColumnName = "id")
+  )
+  private Set<Service> services = new HashSet<Service>();
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Parameter parameter;
+  @ManyToOne(cascade = CascadeType.ALL)
+  private Parameter parameter;
 
-    public ParameterValue() {
-    }
+  public ParameterValue() {
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public ParameterValue(Long id, Long intValue, String textValue) {
+    this.id = id;
+    this.textValue = textValue;
+    this.intValue = intValue;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
 
   public String getTextValue() {
     return textValue;
@@ -62,18 +68,18 @@ public class ParameterValue {
   }
 
   public Set<Service> getServices() {
-        return services;
-    }
+    return services;
+  }
 
-    public void setServices(Set<Service> services) {
-        this.services = services;
-    }
+  public void setServices(Set<Service> services) {
+    this.services = services;
+  }
 
-    public Parameter getParameter() {
-        return parameter;
-    }
+  public Parameter getParameter() {
+    return parameter;
+  }
 
-    public void setParameter(Parameter parameter) {
-        this.parameter = parameter;
-    }
+  public void setParameter(Parameter parameter) {
+    this.parameter = parameter;
+  }
 }

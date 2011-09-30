@@ -1,0 +1,11 @@
+Additional scripts required for installation are in this folder.
+
+********************
+install-socket-rpc.sh
+installs protobuf-socket-rpc into your maven repo
+socket-rpc itself can be downloaded here:
+http://code.google.com/p/protobuf-socket-rpc/downloads/list
+
+Usage:
+install-socket-rpc.sh [path/to/protobuf-socket-rpc-[version].jar]
+********************

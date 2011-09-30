@@ -1,5 +1,6 @@
 package com.porecode.servicechaser.core.dao;
 
+import com.porecode.servicechaser.core.dao.impl.ParameterValueDaoImpl;
 import com.porecode.servicechaser.core.hibernate.ParameterValue;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -20,7 +21,7 @@ public class TestParameterValueDao {
 
     replay(session);
 
-    ParameterValueDao dao = new ParameterValueDao(session);
+    ParameterValueDaoImpl dao = new ParameterValueDaoImpl(session);
     dao.selectAll();
 
     verify(session);

@@ -19,7 +19,7 @@ public final class EntityProtos {
     boolean hasTitle();
     String getTitle();
     
-    // repeated .servicechaser.core.Category children = 3;
+    // repeated .servicechaser.core.entity.Category children = 3;
     java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Category> 
         getChildrenList();
     com.porecode.servicechaser.core.protobuf.EntityProtos.Category getChildren(int index);
@@ -29,12 +29,12 @@ public final class EntityProtos {
     com.porecode.servicechaser.core.protobuf.EntityProtos.CategoryOrBuilder getChildrenOrBuilder(
         int index);
     
-    // optional .servicechaser.core.Category parent = 4;
+    // optional .servicechaser.core.entity.Category parent = 4;
     boolean hasParent();
     com.porecode.servicechaser.core.protobuf.EntityProtos.Category getParent();
     com.porecode.servicechaser.core.protobuf.EntityProtos.CategoryOrBuilder getParentOrBuilder();
     
-    // repeated .servicechaser.core.Parameter parameters = 5;
+    // repeated .servicechaser.core.entity.Parameter parameters = 5;
     java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Parameter> 
         getParametersList();
     com.porecode.servicechaser.core.protobuf.EntityProtos.Parameter getParameters(int index);
@@ -44,7 +44,7 @@ public final class EntityProtos {
     com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterOrBuilder getParametersOrBuilder(
         int index);
     
-    // repeated .servicechaser.core.Service services = 6;
+    // repeated .servicechaser.core.entity.Service services = 6;
     java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Service> 
         getServicesList();
     com.porecode.servicechaser.core.protobuf.EntityProtos.Service getServices(int index);
@@ -74,12 +74,12 @@ public final class EntityProtos {
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Category_descriptor;
+      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Category_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Category_fieldAccessorTable;
+      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Category_fieldAccessorTable;
     }
     
     private int bitField0_;
@@ -125,7 +125,7 @@ public final class EntityProtos {
       }
     }
     
-    // repeated .servicechaser.core.Category children = 3;
+    // repeated .servicechaser.core.entity.Category children = 3;
     public static final int CHILDREN_FIELD_NUMBER = 3;
     private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Category> children_;
     public java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Category> getChildrenList() {
@@ -146,7 +146,7 @@ public final class EntityProtos {
       return children_.get(index);
     }
     
-    // optional .servicechaser.core.Category parent = 4;
+    // optional .servicechaser.core.entity.Category parent = 4;
     public static final int PARENT_FIELD_NUMBER = 4;
     private com.porecode.servicechaser.core.protobuf.EntityProtos.Category parent_;
     public boolean hasParent() {
@@ -159,7 +159,7 @@ public final class EntityProtos {
       return parent_;
     }
     
-    // repeated .servicechaser.core.Parameter parameters = 5;
+    // repeated .servicechaser.core.entity.Parameter parameters = 5;
     public static final int PARAMETERS_FIELD_NUMBER = 5;
     private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Parameter> parameters_;
     public java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Parameter> getParametersList() {
@@ -180,7 +180,7 @@ public final class EntityProtos {
       return parameters_.get(index);
     }
     
-    // repeated .servicechaser.core.Service services = 6;
+    // repeated .servicechaser.core.entity.Service services = 6;
     public static final int SERVICES_FIELD_NUMBER = 6;
     private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Service> services_;
     public java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Service> getServicesList() {
@@ -369,12 +369,12 @@ public final class EntityProtos {
        implements com.porecode.servicechaser.core.protobuf.EntityProtos.CategoryOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Category_descriptor;
+        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Category_descriptor;
       }
       
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Category_fieldAccessorTable;
+        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Category_fieldAccessorTable;
       }
       
       // Construct using com.porecode.servicechaser.core.protobuf.EntityProtos.Category.newBuilder()
@@ -743,7 +743,7 @@ public final class EntityProtos {
         onChanged();
       }
       
-      // repeated .servicechaser.core.Category children = 3;
+      // repeated .servicechaser.core.entity.Category children = 3;
       private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Category> children_ =
         java.util.Collections.emptyList();
       private void ensureChildrenIsMutable() {
@@ -929,7 +929,7 @@ public final class EntityProtos {
         return childrenBuilder_;
       }
       
-      // optional .servicechaser.core.Category parent = 4;
+      // optional .servicechaser.core.entity.Category parent = 4;
       private com.porecode.servicechaser.core.protobuf.EntityProtos.Category parent_ = com.porecode.servicechaser.core.protobuf.EntityProtos.Category.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.porecode.servicechaser.core.protobuf.EntityProtos.Category, com.porecode.servicechaser.core.protobuf.EntityProtos.Category.Builder, com.porecode.servicechaser.core.protobuf.EntityProtos.CategoryOrBuilder> parentBuilder_;
@@ -1019,7 +1019,7 @@ public final class EntityProtos {
         return parentBuilder_;
       }
       
-      // repeated .servicechaser.core.Parameter parameters = 5;
+      // repeated .servicechaser.core.entity.Parameter parameters = 5;
       private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Parameter> parameters_ =
         java.util.Collections.emptyList();
       private void ensureParametersIsMutable() {
@@ -1205,7 +1205,7 @@ public final class EntityProtos {
         return parametersBuilder_;
       }
       
-      // repeated .servicechaser.core.Service services = 6;
+      // repeated .servicechaser.core.entity.Service services = 6;
       private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Service> services_ =
         java.util.Collections.emptyList();
       private void ensureServicesIsMutable() {
@@ -1391,7 +1391,7 @@ public final class EntityProtos {
         return servicesBuilder_;
       }
       
-      // @@protoc_insertion_point(builder_scope:servicechaser.core.Category)
+      // @@protoc_insertion_point(builder_scope:servicechaser.core.entity.Category)
     }
     
     static {
@@ -1399,7 +1399,7 @@ public final class EntityProtos {
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:servicechaser.core.Category)
+    // @@protoc_insertion_point(class_scope:servicechaser.core.entity.Category)
   }
   
   public interface ParameterOrBuilder
@@ -1417,7 +1417,7 @@ public final class EntityProtos {
     boolean hasDescription();
     String getDescription();
     
-    // repeated .servicechaser.core.Category categories = 5;
+    // repeated .servicechaser.core.entity.Category categories = 5;
     java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Category> 
         getCategoriesList();
     com.porecode.servicechaser.core.protobuf.EntityProtos.Category getCategories(int index);
@@ -1427,7 +1427,7 @@ public final class EntityProtos {
     com.porecode.servicechaser.core.protobuf.EntityProtos.CategoryOrBuilder getCategoriesOrBuilder(
         int index);
     
-    // repeated .servicechaser.core.ParameterValue parameter_values = 6;
+    // repeated .servicechaser.core.entity.ParameterValue parameter_values = 6;
     java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue> 
         getParameterValuesList();
     com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue getParameterValues(int index);
@@ -1457,12 +1457,12 @@ public final class EntityProtos {
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Parameter_descriptor;
+      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Parameter_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Parameter_fieldAccessorTable;
+      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Parameter_fieldAccessorTable;
     }
     
     public enum Kind
@@ -1534,7 +1534,7 @@ public final class EntityProtos {
         this.value = value;
       }
       
-      // @@protoc_insertion_point(enum_scope:servicechaser.core.Parameter.Kind)
+      // @@protoc_insertion_point(enum_scope:servicechaser.core.entity.Parameter.Kind)
     }
     
     private int bitField0_;
@@ -1612,7 +1612,7 @@ public final class EntityProtos {
       }
     }
     
-    // repeated .servicechaser.core.Category categories = 5;
+    // repeated .servicechaser.core.entity.Category categories = 5;
     public static final int CATEGORIES_FIELD_NUMBER = 5;
     private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Category> categories_;
     public java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Category> getCategoriesList() {
@@ -1633,7 +1633,7 @@ public final class EntityProtos {
       return categories_.get(index);
     }
     
-    // repeated .servicechaser.core.ParameterValue parameter_values = 6;
+    // repeated .servicechaser.core.entity.ParameterValue parameter_values = 6;
     public static final int PARAMETER_VALUES_FIELD_NUMBER = 6;
     private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue> parameterValues_;
     public java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue> getParameterValuesList() {
@@ -1814,12 +1814,12 @@ public final class EntityProtos {
        implements com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Parameter_descriptor;
+        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Parameter_descriptor;
       }
       
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Parameter_fieldAccessorTable;
+        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Parameter_fieldAccessorTable;
       }
       
       // Construct using com.porecode.servicechaser.core.protobuf.EntityProtos.Parameter.newBuilder()
@@ -2163,7 +2163,7 @@ public final class EntityProtos {
         onChanged();
       }
       
-      // repeated .servicechaser.core.Category categories = 5;
+      // repeated .servicechaser.core.entity.Category categories = 5;
       private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Category> categories_ =
         java.util.Collections.emptyList();
       private void ensureCategoriesIsMutable() {
@@ -2349,7 +2349,7 @@ public final class EntityProtos {
         return categoriesBuilder_;
       }
       
-      // repeated .servicechaser.core.ParameterValue parameter_values = 6;
+      // repeated .servicechaser.core.entity.ParameterValue parameter_values = 6;
       private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue> parameterValues_ =
         java.util.Collections.emptyList();
       private void ensureParameterValuesIsMutable() {
@@ -2535,7 +2535,7 @@ public final class EntityProtos {
         return parameterValuesBuilder_;
       }
       
-      // @@protoc_insertion_point(builder_scope:servicechaser.core.Parameter)
+      // @@protoc_insertion_point(builder_scope:servicechaser.core.entity.Parameter)
     }
     
     static {
@@ -2543,7 +2543,7 @@ public final class EntityProtos {
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:servicechaser.core.Parameter)
+    // @@protoc_insertion_point(class_scope:servicechaser.core.entity.Parameter)
   }
   
   public interface ServiceOrBuilder
@@ -2557,12 +2557,12 @@ public final class EntityProtos {
     boolean hasTitle();
     String getTitle();
     
-    // optional .servicechaser.core.Category category = 3;
+    // optional .servicechaser.core.entity.Category category = 3;
     boolean hasCategory();
     com.porecode.servicechaser.core.protobuf.EntityProtos.Category getCategory();
     com.porecode.servicechaser.core.protobuf.EntityProtos.CategoryOrBuilder getCategoryOrBuilder();
     
-    // repeated .servicechaser.core.Producer producers = 4;
+    // repeated .servicechaser.core.entity.Producer producers = 4;
     java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Producer> 
         getProducersList();
     com.porecode.servicechaser.core.protobuf.EntityProtos.Producer getProducers(int index);
@@ -2572,7 +2572,7 @@ public final class EntityProtos {
     com.porecode.servicechaser.core.protobuf.EntityProtos.ProducerOrBuilder getProducersOrBuilder(
         int index);
     
-    // repeated .servicechaser.core.ParameterValue parameter_values = 5;
+    // repeated .servicechaser.core.entity.ParameterValue parameter_values = 5;
     java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue> 
         getParameterValuesList();
     com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue getParameterValues(int index);
@@ -2602,12 +2602,12 @@ public final class EntityProtos {
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Service_descriptor;
+      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Service_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Service_fieldAccessorTable;
+      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Service_fieldAccessorTable;
     }
     
     private int bitField0_;
@@ -2653,7 +2653,7 @@ public final class EntityProtos {
       }
     }
     
-    // optional .servicechaser.core.Category category = 3;
+    // optional .servicechaser.core.entity.Category category = 3;
     public static final int CATEGORY_FIELD_NUMBER = 3;
     private com.porecode.servicechaser.core.protobuf.EntityProtos.Category category_;
     public boolean hasCategory() {
@@ -2666,7 +2666,7 @@ public final class EntityProtos {
       return category_;
     }
     
-    // repeated .servicechaser.core.Producer producers = 4;
+    // repeated .servicechaser.core.entity.Producer producers = 4;
     public static final int PRODUCERS_FIELD_NUMBER = 4;
     private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Producer> producers_;
     public java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Producer> getProducersList() {
@@ -2687,7 +2687,7 @@ public final class EntityProtos {
       return producers_.get(index);
     }
     
-    // repeated .servicechaser.core.ParameterValue parameter_values = 5;
+    // repeated .servicechaser.core.entity.ParameterValue parameter_values = 5;
     public static final int PARAMETER_VALUES_FIELD_NUMBER = 5;
     private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue> parameterValues_;
     public java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue> getParameterValuesList() {
@@ -2868,12 +2868,12 @@ public final class EntityProtos {
        implements com.porecode.servicechaser.core.protobuf.EntityProtos.ServiceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Service_descriptor;
+        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Service_descriptor;
       }
       
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Service_fieldAccessorTable;
+        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Service_fieldAccessorTable;
       }
       
       // Construct using com.porecode.servicechaser.core.protobuf.EntityProtos.Service.newBuilder()
@@ -3194,7 +3194,7 @@ public final class EntityProtos {
         onChanged();
       }
       
-      // optional .servicechaser.core.Category category = 3;
+      // optional .servicechaser.core.entity.Category category = 3;
       private com.porecode.servicechaser.core.protobuf.EntityProtos.Category category_ = com.porecode.servicechaser.core.protobuf.EntityProtos.Category.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.porecode.servicechaser.core.protobuf.EntityProtos.Category, com.porecode.servicechaser.core.protobuf.EntityProtos.Category.Builder, com.porecode.servicechaser.core.protobuf.EntityProtos.CategoryOrBuilder> categoryBuilder_;
@@ -3284,7 +3284,7 @@ public final class EntityProtos {
         return categoryBuilder_;
       }
       
-      // repeated .servicechaser.core.Producer producers = 4;
+      // repeated .servicechaser.core.entity.Producer producers = 4;
       private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Producer> producers_ =
         java.util.Collections.emptyList();
       private void ensureProducersIsMutable() {
@@ -3470,7 +3470,7 @@ public final class EntityProtos {
         return producersBuilder_;
       }
       
-      // repeated .servicechaser.core.ParameterValue parameter_values = 5;
+      // repeated .servicechaser.core.entity.ParameterValue parameter_values = 5;
       private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue> parameterValues_ =
         java.util.Collections.emptyList();
       private void ensureParameterValuesIsMutable() {
@@ -3656,7 +3656,7 @@ public final class EntityProtos {
         return parameterValuesBuilder_;
       }
       
-      // @@protoc_insertion_point(builder_scope:servicechaser.core.Service)
+      // @@protoc_insertion_point(builder_scope:servicechaser.core.entity.Service)
     }
     
     static {
@@ -3664,7 +3664,7 @@ public final class EntityProtos {
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:servicechaser.core.Service)
+    // @@protoc_insertion_point(class_scope:servicechaser.core.entity.Service)
   }
   
   public interface ParameterValueOrBuilder
@@ -3702,12 +3702,12 @@ public final class EntityProtos {
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_ParameterValue_descriptor;
+      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_ParameterValue_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_ParameterValue_fieldAccessorTable;
+      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_ParameterValue_fieldAccessorTable;
     }
     
     private int bitField0_;
@@ -3907,12 +3907,12 @@ public final class EntityProtos {
        implements com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValueOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_ParameterValue_descriptor;
+        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_ParameterValue_descriptor;
       }
       
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_ParameterValue_fieldAccessorTable;
+        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_ParameterValue_fieldAccessorTable;
       }
       
       // Construct using com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue.newBuilder()
@@ -4145,7 +4145,7 @@ public final class EntityProtos {
         return this;
       }
       
-      // @@protoc_insertion_point(builder_scope:servicechaser.core.ParameterValue)
+      // @@protoc_insertion_point(builder_scope:servicechaser.core.entity.ParameterValue)
     }
     
     static {
@@ -4153,7 +4153,7 @@ public final class EntityProtos {
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:servicechaser.core.ParameterValue)
+    // @@protoc_insertion_point(class_scope:servicechaser.core.entity.ParameterValue)
   }
   
   public interface ProducerOrBuilder
@@ -4167,7 +4167,7 @@ public final class EntityProtos {
     boolean hasTitle();
     String getTitle();
     
-    // repeated .servicechaser.core.Service services = 3;
+    // repeated .servicechaser.core.entity.Service services = 3;
     java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Service> 
         getServicesList();
     com.porecode.servicechaser.core.protobuf.EntityProtos.Service getServices(int index);
@@ -4197,12 +4197,12 @@ public final class EntityProtos {
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Producer_descriptor;
+      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Producer_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Producer_fieldAccessorTable;
+      return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Producer_fieldAccessorTable;
     }
     
     private int bitField0_;
@@ -4248,7 +4248,7 @@ public final class EntityProtos {
       }
     }
     
-    // repeated .servicechaser.core.Service services = 3;
+    // repeated .servicechaser.core.entity.Service services = 3;
     public static final int SERVICES_FIELD_NUMBER = 3;
     private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Service> services_;
     public java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Service> getServicesList() {
@@ -4413,12 +4413,12 @@ public final class EntityProtos {
        implements com.porecode.servicechaser.core.protobuf.EntityProtos.ProducerOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Producer_descriptor;
+        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Producer_descriptor;
       }
       
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_Producer_fieldAccessorTable;
+        return com.porecode.servicechaser.core.protobuf.EntityProtos.internal_static_servicechaser_core_entity_Producer_fieldAccessorTable;
       }
       
       // Construct using com.porecode.servicechaser.core.protobuf.EntityProtos.Producer.newBuilder()
@@ -4664,7 +4664,7 @@ public final class EntityProtos {
         onChanged();
       }
       
-      // repeated .servicechaser.core.Service services = 3;
+      // repeated .servicechaser.core.entity.Service services = 3;
       private java.util.List<com.porecode.servicechaser.core.protobuf.EntityProtos.Service> services_ =
         java.util.Collections.emptyList();
       private void ensureServicesIsMutable() {
@@ -4850,7 +4850,7 @@ public final class EntityProtos {
         return servicesBuilder_;
       }
       
-      // @@protoc_insertion_point(builder_scope:servicechaser.core.Producer)
+      // @@protoc_insertion_point(builder_scope:servicechaser.core.entity.Producer)
     }
     
     static {
@@ -4858,34 +4858,34 @@ public final class EntityProtos {
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:servicechaser.core.Producer)
+    // @@protoc_insertion_point(class_scope:servicechaser.core.entity.Producer)
   }
   
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_servicechaser_core_Category_descriptor;
+    internal_static_servicechaser_core_entity_Category_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_servicechaser_core_Category_fieldAccessorTable;
+      internal_static_servicechaser_core_entity_Category_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_servicechaser_core_Parameter_descriptor;
+    internal_static_servicechaser_core_entity_Parameter_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_servicechaser_core_Parameter_fieldAccessorTable;
+      internal_static_servicechaser_core_entity_Parameter_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_servicechaser_core_Service_descriptor;
+    internal_static_servicechaser_core_entity_Service_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_servicechaser_core_Service_fieldAccessorTable;
+      internal_static_servicechaser_core_entity_Service_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_servicechaser_core_ParameterValue_descriptor;
+    internal_static_servicechaser_core_entity_ParameterValue_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_servicechaser_core_ParameterValue_fieldAccessorTable;
+      internal_static_servicechaser_core_entity_ParameterValue_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_servicechaser_core_Producer_descriptor;
+    internal_static_servicechaser_core_entity_Producer_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_servicechaser_core_Producer_fieldAccessorTable;
+      internal_static_servicechaser_core_entity_Producer_fieldAccessorTable;
   
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4896,72 +4896,74 @@ public final class EntityProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n/src/main/resources/protobuf/core-entit" +
-      "ies.proto\022\022servicechaser.core\"\345\001\n\010Catego" +
-      "ry\022\n\n\002id\030\001 \001(\003\022\r\n\005title\030\002 \001(\t\022.\n\010childre" +
-      "n\030\003 \003(\0132\034.servicechaser.core.Category\022,\n" +
-      "\006parent\030\004 \001(\0132\034.servicechaser.core.Categ" +
-      "ory\0221\n\nparameters\030\005 \003(\0132\035.servicechaser." +
-      "core.Parameter\022-\n\010services\030\006 \003(\0132\033.servi" +
-      "cechaser.core.Service\"\334\001\n\tParameter\022\n\n\002i" +
-      "d\030\001 \001(\003\022\r\n\005title\030\002 \001(\t\022\023\n\013description\030\003 " +
-      "\001(\t\0220\n\ncategories\030\005 \003(\0132\034.servicechaser.",
-      "core.Category\022<\n\020parameter_values\030\006 \003(\0132" +
-      "\".servicechaser.core.ParameterValue\"/\n\004K" +
-      "ind\022\t\n\005RADIO\020\000\022\r\n\tCHECK_BOX\020\001\022\r\n\tDATA_SP" +
-      "AN\020\002\"\303\001\n\007Service\022\n\n\002id\030\001 \001(\003\022\r\n\005title\030\002 " +
-      "\001(\t\022.\n\010category\030\003 \001(\0132\034.servicechaser.co" +
-      "re.Category\022/\n\tproducers\030\004 \003(\0132\034.service" +
-      "chaser.core.Producer\022<\n\020parameter_values" +
-      "\030\005 \003(\0132\".servicechaser.core.ParameterVal" +
-      "ue\"C\n\016ParameterValue\022\n\n\002id\030\001 \001(\003\022\022\n\ntext" +
-      "_value\030\002 \001(\t\022\021\n\tint_value\030\003 \001(\003\"T\n\010Produ",
-      "cer\022\n\n\002id\030\001 \001(\003\022\r\n\005title\030\002 \001(\t\022-\n\010servic" +
-      "es\030\003 \003(\0132\033.servicechaser.core.ServiceB8\n" +
-      "(com.porecode.servicechaser.core.protobu" +
-      "fB\014EntityProtos"
+      "ies.proto\022\031servicechaser.core.entity\"\201\002\n" +
+      "\010Category\022\n\n\002id\030\001 \001(\003\022\r\n\005title\030\002 \001(\t\0225\n\010" +
+      "children\030\003 \003(\0132#.servicechaser.core.enti" +
+      "ty.Category\0223\n\006parent\030\004 \001(\0132#.servicecha" +
+      "ser.core.entity.Category\0228\n\nparameters\030\005" +
+      " \003(\0132$.servicechaser.core.entity.Paramet" +
+      "er\0224\n\010services\030\006 \003(\0132\".servicechaser.cor" +
+      "e.entity.Service\"\352\001\n\tParameter\022\n\n\002id\030\001 \001" +
+      "(\003\022\r\n\005title\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\0227",
+      "\n\ncategories\030\005 \003(\0132#.servicechaser.core." +
+      "entity.Category\022C\n\020parameter_values\030\006 \003(" +
+      "\0132).servicechaser.core.entity.ParameterV" +
+      "alue\"/\n\004Kind\022\t\n\005RADIO\020\000\022\r\n\tCHECK_BOX\020\001\022\r" +
+      "\n\tDATA_SPAN\020\002\"\330\001\n\007Service\022\n\n\002id\030\001 \001(\003\022\r\n" +
+      "\005title\030\002 \001(\t\0225\n\010category\030\003 \001(\0132#.service" +
+      "chaser.core.entity.Category\0226\n\tproducers" +
+      "\030\004 \003(\0132#.servicechaser.core.entity.Produ" +
+      "cer\022C\n\020parameter_values\030\005 \003(\0132).servicec" +
+      "haser.core.entity.ParameterValue\"C\n\016Para",
+      "meterValue\022\n\n\002id\030\001 \001(\003\022\022\n\ntext_value\030\002 \001" +
+      "(\t\022\021\n\tint_value\030\003 \001(\003\"[\n\010Producer\022\n\n\002id\030" +
+      "\001 \001(\003\022\r\n\005title\030\002 \001(\t\0224\n\010services\030\003 \003(\0132\"" +
+      ".servicechaser.core.entity.ServiceB8\n(co" +
+      "m.porecode.servicechaser.core.protobufB\014" +
+      "EntityProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
         public com.google.protobuf.ExtensionRegistry assignDescriptors(
             com.google.protobuf.Descriptors.FileDescriptor root) {
           descriptor = root;
-          internal_static_servicechaser_core_Category_descriptor =
+          internal_static_servicechaser_core_entity_Category_descriptor =
             getDescriptor().getMessageTypes().get(0);
-          internal_static_servicechaser_core_Category_fieldAccessorTable = new
+          internal_static_servicechaser_core_entity_Category_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_servicechaser_core_Category_descriptor,
+              internal_static_servicechaser_core_entity_Category_descriptor,
               new java.lang.String[] { "Id", "Title", "Children", "Parent", "Parameters", "Services", },
               com.porecode.servicechaser.core.protobuf.EntityProtos.Category.class,
               com.porecode.servicechaser.core.protobuf.EntityProtos.Category.Builder.class);
-          internal_static_servicechaser_core_Parameter_descriptor =
+          internal_static_servicechaser_core_entity_Parameter_descriptor =
             getDescriptor().getMessageTypes().get(1);
-          internal_static_servicechaser_core_Parameter_fieldAccessorTable = new
+          internal_static_servicechaser_core_entity_Parameter_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_servicechaser_core_Parameter_descriptor,
+              internal_static_servicechaser_core_entity_Parameter_descriptor,
               new java.lang.String[] { "Id", "Title", "Description", "Categories", "ParameterValues", },
               com.porecode.servicechaser.core.protobuf.EntityProtos.Parameter.class,
               com.porecode.servicechaser.core.protobuf.EntityProtos.Parameter.Builder.class);
-          internal_static_servicechaser_core_Service_descriptor =
+          internal_static_servicechaser_core_entity_Service_descriptor =
             getDescriptor().getMessageTypes().get(2);
-          internal_static_servicechaser_core_Service_fieldAccessorTable = new
+          internal_static_servicechaser_core_entity_Service_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_servicechaser_core_Service_descriptor,
+              internal_static_servicechaser_core_entity_Service_descriptor,
               new java.lang.String[] { "Id", "Title", "Category", "Producers", "ParameterValues", },
               com.porecode.servicechaser.core.protobuf.EntityProtos.Service.class,
               com.porecode.servicechaser.core.protobuf.EntityProtos.Service.Builder.class);
-          internal_static_servicechaser_core_ParameterValue_descriptor =
+          internal_static_servicechaser_core_entity_ParameterValue_descriptor =
             getDescriptor().getMessageTypes().get(3);
-          internal_static_servicechaser_core_ParameterValue_fieldAccessorTable = new
+          internal_static_servicechaser_core_entity_ParameterValue_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_servicechaser_core_ParameterValue_descriptor,
+              internal_static_servicechaser_core_entity_ParameterValue_descriptor,
               new java.lang.String[] { "Id", "TextValue", "IntValue", },
               com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue.class,
               com.porecode.servicechaser.core.protobuf.EntityProtos.ParameterValue.Builder.class);
-          internal_static_servicechaser_core_Producer_descriptor =
+          internal_static_servicechaser_core_entity_Producer_descriptor =
             getDescriptor().getMessageTypes().get(4);
-          internal_static_servicechaser_core_Producer_fieldAccessorTable = new
+          internal_static_servicechaser_core_entity_Producer_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_servicechaser_core_Producer_descriptor,
+              internal_static_servicechaser_core_entity_Producer_descriptor,
               new java.lang.String[] { "Id", "Title", "Services", },
               com.porecode.servicechaser.core.protobuf.EntityProtos.Producer.class,
               com.porecode.servicechaser.core.protobuf.EntityProtos.Producer.Builder.class);

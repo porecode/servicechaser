@@ -1,9 +1,10 @@
 package com.porecode.servicechaser.core.protobuf.mapper;
 
-import com.porecode.servicechaser.core.protobuf.EntityProtos;
 import com.porecode.servicechaser.core.hibernate.ParameterValue;
+import com.porecode.servicechaser.core.protobuf.EntityProtos;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class TestReflectiveMapper {
   

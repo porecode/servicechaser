@@ -3,9 +3,9 @@ package com.porecode.servicechaser.core.protobuf.mapper;
 import com.porecode.servicechaser.core.hibernate.ParameterValue;
 import com.porecode.servicechaser.core.protobuf.EntityProtos;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-import javax.swing.text.html.parser.Entity;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 /**
  * Test for Parameter Value Mapper
