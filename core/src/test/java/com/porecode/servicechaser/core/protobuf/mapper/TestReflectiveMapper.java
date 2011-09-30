@@ -7,8 +7,8 @@ import static org.junit.Assert.*;
 
 public class TestReflectiveMapper {
   
-  private Long intValue = 1L;
-  private String stringValue = "asdf";
+  private static final Long intValue = 1L;
+  private static final String stringValue = "asdf";
   
   @Test 
   public void testParameterEntityValueReflectiveMap() throws Exception {
