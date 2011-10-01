@@ -1,8 +1,6 @@
 package com.porecode.servicechaser.webapi.servlet;
 
 import com.google.inject.Injector;
-import com.porecode.messaging.MessageSender;
-import com.porecode.messaging.exception.SendingFailedException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -35,11 +33,5 @@ public class EchoServlet extends HttpServlet {
     PrintWriter writer = response.getWriter();
     writer.println(responseText);
     writer.close();
-
-    try {
-      (injector.getInstance(MessageSender.class)).send(responseText);
-    } catch (SendingFailedException e) {
-      log.error("Error while sending message", e);
-    }
   }
 }

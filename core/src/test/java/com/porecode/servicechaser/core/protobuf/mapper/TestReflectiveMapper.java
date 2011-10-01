@@ -6,6 +6,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * @author filipovskii_off
+ */
 public class TestReflectiveMapper {
   
   private static final Long intValue = 1L;

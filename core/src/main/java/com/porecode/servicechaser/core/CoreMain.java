@@ -10,6 +10,11 @@ import com.porecode.servicechaser.core.protobuf.CoreServices;
 
 import java.util.concurrent.Executors;
 
+/**
+ * Starts protocol buffer socket server
+ *
+ * @author filipovskii_off
+ */
 public final class CoreMain {
 
   public static final void main(String... args) {

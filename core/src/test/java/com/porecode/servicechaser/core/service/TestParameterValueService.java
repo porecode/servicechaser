@@ -20,6 +20,9 @@ import static org.easymock.EasyMock.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+/**
+ * @author filipovskii_off
+ */
 public class TestParameterValueService {
 
   private final static Long intValue = 1L;

@@ -6,6 +6,9 @@ import com.google.inject.Injector;
 import com.google.inject.matcher.Matchers;
 import org.junit.Test;
 
+/**
+ * @author filipovskii_off
+ */
 public class InterceptorTest {
 
   private class TestModule extends AbstractModule {

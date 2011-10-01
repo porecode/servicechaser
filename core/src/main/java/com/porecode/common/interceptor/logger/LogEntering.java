@@ -8,6 +8,8 @@ import java.lang.annotation.Target;
 /**
  * Log method entering<br>
  * <b>value</b> - Format string for input params
+ *
+ * @author filipovskii_off
  * @see LogInterceptor
  */
 @Retention(RetentionPolicy.RUNTIME) @Target(ElementType.METHOD)

@@ -11,6 +11,8 @@ import java.lang.reflect.Method;
 /**
  * Log interceptor.<br/>
  * Handles {@link LogEntering} and {@link LogLeaving} annotations
+ *
+ * @author filipovskii_off
  * @see #logInfo(String, Object[], String, org.apache.commons.logging.Log)
  * @see #logError(String, Throwable, org.apache.commons.logging.Log) 
  */

@@ -31,6 +31,14 @@
           <password>sa</password>
           <schemas/>
         </configuration>
+        <executions>
+          <execution>
+            <phase>compile</phase>
+            <goals>
+              <goal>migrate</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       
       <plugin>

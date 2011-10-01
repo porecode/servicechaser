@@ -13,6 +13,11 @@ import org.hibernate.cfg.Configuration;
 
 import javax.inject.Inject;
 
+/**
+ * Configuration for protocol buffer services
+ *
+ * @author filipovskii_off
+ */
 public class ProtobufServiceModule extends AbstractModule {
   @Override
   protected void configure() {
@@ -24,6 +29,7 @@ public class ProtobufServiceModule extends AbstractModule {
   @Inject
   @Provides
   Session getHibernateSession(SessionFactory factory) {
+    // TODO: returns a valid session only for the first time
     return factory.getCurrentSession();
   }
 

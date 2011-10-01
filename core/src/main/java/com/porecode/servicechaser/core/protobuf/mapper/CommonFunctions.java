@@ -3,6 +3,9 @@ package com.porecode.servicechaser.core.protobuf.mapper;
 import com.google.protobuf.Descriptors;
 import com.google.protobuf.Message;
 
+/**
+ * @author filipovskii_off
+ */
 final class CommonFunctions {
 
   /**

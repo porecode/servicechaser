@@ -13,6 +13,8 @@ import java.util.List;
 
 /**
  * Protobuffer {@link CoreServices.ParameterValueService} implementation
+ *
+ * @author filipovskii_off
  */
 public final class ParameterValueServiceImpl
     extends CoreServices.ParameterValueService {

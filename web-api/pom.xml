@@ -70,6 +70,17 @@
   </repositories>
 
   <dependencies>
+    <dependency>
+      <groupId>com.porecode.servicechaser</groupId>
+      <artifactId>core</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.googlecode.protobuf-java-format</groupId>
+      <artifactId>protobuf-java-format</artifactId>
+      <version>1.2</version>
+    </dependency>
 
     <!-- MESSAGING -->
     <dependency>

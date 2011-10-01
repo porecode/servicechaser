@@ -11,7 +11,8 @@ import java.lang.reflect.Method;
  * Converts any java {@link Object}
  * to protobuf {@link Message} and vice versa</br>.
  * Uses reflection to get object field values and determine message field names
- * 
+ *
+ * @author filipovskii_off
  */
 public final class ReflectiveMapper {
 

@@ -7,9 +7,14 @@ import java.util.List;
 /**
  * {@link ParameterValue} data manipulations
  *
+ * @author filipovskii_off
  * @see ParameterValue
  */
 public interface ParameterValueDao {
 
+  /**
+   * Selects all {@link ParameterValue} objects
+   * @return
+   */
   List<ParameterValue> selectAll();
 }
