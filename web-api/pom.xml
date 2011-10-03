@@ -89,13 +89,13 @@
       <version>4.2.2.GA</version>
     </dependency>
 
-    <dependency>
-       <groupId>org.jboss.spec</groupId>
-       <artifactId>jboss-javaee-6.0</artifactId>
-       <version>1.0.0.Final</version>
-       <type>pom</type>
-       <scope>provided</scope>
-    </dependency>
+    <!--<dependency>-->
+       <!--<groupId>org.jboss.spec</groupId>-->
+       <!--<artifactId>jboss-javaee-6.0</artifactId>-->
+       <!--<version>1.0.0.Final</version>-->
+       <!--<type>pom</type>-->
+       <!--<scope>provided</scope>-->
+    <!--</dependency>-->
 
     <dependency>
       <groupId>org.hornetq</groupId>
@@ -167,7 +167,8 @@
       <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
       <version>6.0</version>
-	  </dependency>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
   
 </project>

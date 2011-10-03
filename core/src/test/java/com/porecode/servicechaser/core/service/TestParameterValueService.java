@@ -7,6 +7,7 @@ import com.porecode.servicechaser.core.hibernate.ParameterValue;
 import com.porecode.servicechaser.core.protobuf.CoreServices;
 import com.porecode.servicechaser.core.protobuf.EntityProtos;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -34,7 +35,7 @@ public class TestParameterValueService {
   private CountDownLatch latch;
 
   private ParameterValueDao dao;
-  private Session session;
+  private SessionFactory sessionFactory;
   private List<ParameterValue> parameterValues =
       new ArrayList<ParameterValue>();
 
@@ -47,8 +48,8 @@ public class TestParameterValueService {
 
   @Before
   public void setUp() {
-    session = createMock(Session.class);
-    dao = new ParameterValueDaoImpl(session);
+    sessionFactory = createMock(SessionFactory.class);
+    dao = new ParameterValueDaoImpl(sessionFactory);
     initParamValues(parameterValues);
     latch = new CountDownLatch(1);
   }

@@ -26,13 +26,6 @@ public class ProtobufServiceModule extends AbstractModule {
     bind(ParameterValueDao.class).to(ParameterValueDaoImpl.class);
   }
 
-  @Inject
-  @Provides
-  Session getHibernateSession(SessionFactory factory) {
-    // TODO: returns a valid session only for the first time
-    return factory.getCurrentSession();
-  }
-
   @Singleton
   @Provides
   SessionFactory getHibernateSessionFactory() {
