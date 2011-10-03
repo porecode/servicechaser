@@ -1,5 +1,8 @@
 package com.porecode.servicechaser.webapi.servlet;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.Key;
 import com.google.inject.Singleton;
 import com.google.protobuf.BlockingRpcChannel;
 import com.google.protobuf.RpcController;
@@ -9,7 +12,8 @@ import com.googlecode.protobuf.socketrpc.RpcChannels;
 import com.googlecode.protobuf.socketrpc.RpcConnectionFactory;
 import com.googlecode.protobuf.socketrpc.SocketRpcConnectionFactories;
 import com.googlecode.protobuf.socketrpc.SocketRpcController;
-import com.porecode.servicechaser.core.protobuf.CoreServices;
+import com.porecode.rpc.guice.CoreRpcModule;
+import com.porecode.rpc.protobuf.CoreServices;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,10 +28,8 @@ public class ParameterValueServlet extends HttpServlet {
   protected void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
 
-    // Create channel
-    RpcConnectionFactory connectionFactory = SocketRpcConnectionFactories
-        .createRpcConnectionFactory("localhost", 7777);
-    BlockingRpcChannel channel = RpcChannels.newBlockingRpcChannel(connectionFactory);
+    Injector inj = Guice.createInjector(new CoreRpcModule());
+    BlockingRpcChannel channel = inj.getInstance(BlockingRpcChannel.class);
 
     // Call service
     CoreServices.ParameterValueService.BlockingInterface service =

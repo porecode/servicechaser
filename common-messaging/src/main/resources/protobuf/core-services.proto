@@ -1,7 +1,7 @@
 package servicechaser.core.service;
 import "src/main/resources/protobuf/core-entities.proto";
 
-option java_package = "com.porecode.servicechaser.core.protobuf";
+option java_package = "com.porecode.rpc.protobuf";
 //option java_outer_classname = "ParameterValueService";
 option java_generic_services = true;
 

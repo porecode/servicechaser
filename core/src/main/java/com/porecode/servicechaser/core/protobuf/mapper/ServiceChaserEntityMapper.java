@@ -1,7 +1,7 @@
 package com.porecode.servicechaser.core.protobuf.mapper;
 
+import com.porecode.rpc.protobuf.EntityProtos;
 import com.porecode.servicechaser.core.hibernate.ParameterValue;
-import com.porecode.servicechaser.core.protobuf.EntityProtos;
 
 /**
  * Protobuf message converter

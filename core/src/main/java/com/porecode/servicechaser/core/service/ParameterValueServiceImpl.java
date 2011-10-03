@@ -2,10 +2,10 @@ package com.porecode.servicechaser.core.service;
 
 import com.google.protobuf.RpcCallback;
 import com.google.protobuf.RpcController;
+import com.porecode.rpc.protobuf.CoreServices;
+import com.porecode.rpc.protobuf.EntityProtos;
 import com.porecode.servicechaser.core.dao.ParameterValueDao;
 import com.porecode.servicechaser.core.hibernate.ParameterValue;
-import com.porecode.servicechaser.core.protobuf.CoreServices;
-import com.porecode.servicechaser.core.protobuf.EntityProtos;
 import com.porecode.servicechaser.core.protobuf.mapper.ReflectiveMapper;
 
 import javax.inject.Inject;

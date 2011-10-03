@@ -1,11 +1,11 @@
 package com.porecode.servicechaser.core.service;
 
 import com.google.protobuf.RpcCallback;
+import com.porecode.rpc.protobuf.CoreServices;
+import com.porecode.rpc.protobuf.EntityProtos;
 import com.porecode.servicechaser.core.dao.ParameterValueDao;
 import com.porecode.servicechaser.core.dao.impl.ParameterValueDaoImpl;
 import com.porecode.servicechaser.core.hibernate.ParameterValue;
-import com.porecode.servicechaser.core.protobuf.CoreServices;
-import com.porecode.servicechaser.core.protobuf.EntityProtos;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.Before;
@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import static com.porecode.servicechaser.core.protobuf.CoreServices.ParameterValueService;
 import static org.easymock.EasyMock.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
@@ -61,7 +60,7 @@ public class TestParameterValueService {
     expect(dao.selectAll()).andReturn(parameterValues);
     replay(dao);
 
-    ParameterValueService service =
+    CoreServices.ParameterValueService service =
         new ParameterValueServiceImpl(dao);
 
     service.listAll(null, null,

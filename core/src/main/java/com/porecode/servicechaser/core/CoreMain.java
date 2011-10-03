@@ -5,8 +5,9 @@ import com.google.inject.Injector;
 import com.googlecode.protobuf.socketrpc.RpcServer;
 import com.googlecode.protobuf.socketrpc.ServerRpcConnectionFactory;
 import com.googlecode.protobuf.socketrpc.SocketRpcConnectionFactories;
+import com.porecode.rpc.guice.CoreRpcModule;
+import com.porecode.rpc.protobuf.CoreServices;
 import com.porecode.servicechaser.core.guice.ProtobufServiceModule;
-import com.porecode.servicechaser.core.protobuf.CoreServices;
 
 import java.util.concurrent.Executors;
 
@@ -18,15 +19,11 @@ import java.util.concurrent.Executors;
 public final class CoreMain {
 
   public static final void main(String... args) {
-    Injector inj = Guice.createInjector(new ProtobufServiceModule());
+    Injector inj = Guice.createInjector(
+        new ProtobufServiceModule(),
+        new CoreRpcModule());
 
-    ServerRpcConnectionFactory rpcConnectionFactory =
-        SocketRpcConnectionFactories
-        .createServerRpcConnectionFactory(7777);
-
-    RpcServer server = new RpcServer(rpcConnectionFactory,
-        Executors.newFixedThreadPool(1), true);
-
+    RpcServer server = inj.getInstance(RpcServer.class);
     server.registerService(inj.getInstance(
         CoreServices.ParameterValueService.class)); // For non-blocking impl
 
