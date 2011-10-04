@@ -16,7 +16,7 @@ import java.io.Serializable;
  * @see <a href='http://www.ibm.com/developerworks/java/tutorials/j-jms/j-jms-updated-pdf.pdf'>
  *   Nice JMS tutorial</a>
  */
-public class JmsMessageSender implements MessageSender {
+public final class JmsMessageSender implements MessageSender {
 
   private MessageProducer producer;
   private Session session;

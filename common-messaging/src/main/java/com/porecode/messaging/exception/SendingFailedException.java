@@ -1,6 +1,6 @@
 package com.porecode.messaging.exception;
 
-public class SendingFailedException extends Exception {
+public final class SendingFailedException extends Exception {
 
   public SendingFailedException() {
 

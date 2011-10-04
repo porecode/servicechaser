@@ -16,7 +16,7 @@ import java.lang.reflect.Method;
  * @see #logInfo(String, Object[], String, org.apache.commons.logging.Log)
  * @see #logError(String, Throwable, org.apache.commons.logging.Log) 
  */
-public class LogInterceptor implements MethodInterceptor {
+public final class LogInterceptor implements MethodInterceptor {
 
   private final String startText;
 

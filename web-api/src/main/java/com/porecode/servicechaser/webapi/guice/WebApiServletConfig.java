@@ -10,7 +10,7 @@ import com.porecode.servicechaser.webapi.servlet.ParameterValueServlet;
 /**
  * @see <a href="http://code.google.com/p/google-guice/wiki/Servlets">Guice servlet tutorial</a>
  */
-public class WebApiServletConfig extends GuiceServletContextListener {
+public final class WebApiServletConfig extends GuiceServletContextListener {
   
   @Override
   protected Injector getInjector() {

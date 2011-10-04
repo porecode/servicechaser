@@ -1,6 +1,6 @@
 package com.porecode.messaging.exception;
 
-public class ReceivingFailedException extends Exception {
+public final class ReceivingFailedException extends Exception {
 
   public ReceivingFailedException() {
   }

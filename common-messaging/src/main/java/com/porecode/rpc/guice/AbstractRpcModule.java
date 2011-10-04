@@ -31,6 +31,13 @@ abstract class AbstractRpcModule extends AbstractModule {
    */
   protected abstract String getPropertiesFileName();
 
+  /**
+   * Binds values from a properties file, specified in
+   * {@link #getPropertiesFileName()}.
+   * <br />
+   * Be careful, overriding it.
+   * Call <pre>super.configure()</pre>
+   */
   @Override
   protected void configure() {
     Names.bindProperties(binder(), getProperties());
@@ -54,7 +61,7 @@ abstract class AbstractRpcModule extends AbstractModule {
    */
   @Inject
   @Provides
-  RpcServer getRpcServer(
+  final RpcServer getRpcServer(
       @Named("rpc.server.port") int port,
       @Named("rpc.server.pool-size") int poolSize) {
 
@@ -76,7 +83,7 @@ abstract class AbstractRpcModule extends AbstractModule {
    */
   @Inject
   @Provides
-  RpcConnectionFactory getClientConnectionFactory(
+  final RpcConnectionFactory getClientConnectionFactory(
       @Named("rpc.server.name") String serverName,
       @Named("rpc.server.port") int port){
 
@@ -99,7 +106,7 @@ abstract class AbstractRpcModule extends AbstractModule {
    */
   @Inject
   @Provides
-  BlockingRpcChannel getBlockingRpcChannel(
+  final BlockingRpcChannel getBlockingRpcChannel(
       RpcConnectionFactory connectionFactory) {
     return RpcChannels.newBlockingRpcChannel(connectionFactory);
   }
@@ -119,14 +126,14 @@ abstract class AbstractRpcModule extends AbstractModule {
    */
   @Inject
   @Provides
-  RpcChannel getNonBlockingRpcChannel(
+  final RpcChannel getNonBlockingRpcChannel(
       RpcConnectionFactory connectionFactory,
       @Named("rpc.client.pool-size") int poolSize) {
     return RpcChannels.newRpcChannel(
         connectionFactory, Executors.newFixedThreadPool(poolSize));
   }
 
-  Properties getProperties() {
+  private Properties getProperties() {
     Properties properties = new Properties();
     try {
       InputStream is =

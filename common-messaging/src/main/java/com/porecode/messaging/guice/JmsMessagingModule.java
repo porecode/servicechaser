@@ -9,7 +9,7 @@ import javax.inject.Singleton;
 import javax.jms.*;
 import javax.naming.InitialContext;
 
-public class JmsMessagingModule extends AbstractModule {
+public final class JmsMessagingModule extends AbstractModule {
 
   @Override
   protected void configure() {

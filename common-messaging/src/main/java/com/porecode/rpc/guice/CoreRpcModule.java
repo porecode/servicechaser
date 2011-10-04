@@ -12,7 +12,7 @@ package com.porecode.rpc.guice;
  * <br/>
  * Bindings are defined in {@link AbstractRpcModule}
  */
-public class CoreRpcModule extends AbstractRpcModule {
+public final class CoreRpcModule extends AbstractRpcModule {
 
   public static final String propFile = "core-rpc.properties";
 

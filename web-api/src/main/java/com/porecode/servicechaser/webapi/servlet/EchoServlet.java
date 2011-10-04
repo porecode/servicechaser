@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @Singleton
-public class EchoServlet extends HttpServlet {
+public final class EchoServlet extends HttpServlet {
 
   private static final Log log = LogFactory.getLog(EchoServlet.class);
 

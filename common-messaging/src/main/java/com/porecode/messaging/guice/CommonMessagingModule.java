@@ -2,7 +2,7 @@ package com.porecode.messaging.guice;
 
 import com.google.inject.AbstractModule;
 
-public class CommonMessagingModule extends AbstractModule {
+public final class CommonMessagingModule extends AbstractModule {
 
   @Override
   protected void configure() {

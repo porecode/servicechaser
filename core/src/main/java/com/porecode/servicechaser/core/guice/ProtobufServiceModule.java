@@ -18,7 +18,7 @@ import javax.inject.Inject;
  *
  * @author filipovskii_off
  */
-public class ProtobufServiceModule extends AbstractModule {
+public final class ProtobufServiceModule extends AbstractModule {
   @Override
   protected void configure() {
     bind(CoreServices.ParameterValueService.class).to(

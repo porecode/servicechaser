@@ -16,7 +16,7 @@ import javax.jms.MessageListener;
  * @see <a href='http://www.ibm.com/developerworks/java/tutorials/j-jms/j-jms-updated-pdf.pdf'>
  *   Nice JMS tutorial</a>
  */
-public class JmsMessageReceiver implements MessageReceiver {
+public final class JmsMessageReceiver implements MessageReceiver {
 
   private MessageConsumer consumer;
 
