@@ -11,6 +11,7 @@
     <module>common-messaging</module>
     <module>web-api</module>
     <module>core</module>
+    <module>frontend</module>
   </modules>
 
 <!-- 
