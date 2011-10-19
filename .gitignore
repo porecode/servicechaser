@@ -7,3 +7,4 @@ target/
 servicechaser.ipr
 servicechaser.iws
 servicechaser.iml
+.livereload
