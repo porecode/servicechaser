@@ -1,6 +1,6 @@
-var Views = {};
-
-require(["scripts/lib/backbone/backbone-min.js"], 
+define(["scripts/lib/backbone/backbone-min.js"], 
     function() {
-      Views.Category = Backbone.View.extend({});
-});
+      return {
+        Category : Backbone.View.extend({})
+      }}
+);
