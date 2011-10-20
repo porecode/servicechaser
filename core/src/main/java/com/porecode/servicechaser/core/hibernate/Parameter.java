@@ -28,17 +28,14 @@ public class Parameter {
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "categories_parameters",
-            joinColumns =
-            @JoinColumn(name = "parameter_id", referencedColumnName = "id"),
-            inverseJoinColumns =
-            @JoinColumn(name = "category_id", referencedColumnName = "id")
+            joinColumns = @JoinColumn(name = "category_id"),
+            inverseJoinColumns = @JoinColumn(name = "parameter_id")
     )
     private Set<Category> categories = new HashSet<Category>();
 
-//    @OneToMany(cascade = CascadeType.ALL)
-//    @JoinTable(name = "parameter_values",
-//            joinColumns = {@JoinColumn(name = "parameter_id", referencedColumnName = "id")})
-//    private Set<ParameterValue> parameter_values = new HashSet<ParameterValue>();
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "parameter_id")
+    private Set<ParameterValue> parameter_values = new HashSet<ParameterValue>();
 
     public Parameter() {
     }
@@ -83,11 +80,11 @@ public class Parameter {
         this.categories = categories;
     }
 
-//    public Set<ParameterValue> getParameter_values() {
-//        return parameter_values;
-//    }
-//
-//    public void setParameter_values(Set<ParameterValue> parameter_values) {
-//        this.parameter_values = parameter_values;
-//    }
+    public Set<ParameterValue> getParameter_values() {
+        return parameter_values;
+    }
+
+    public void setParameter_values(Set<ParameterValue> parameter_values) {
+        this.parameter_values = parameter_values;
+    }
 }

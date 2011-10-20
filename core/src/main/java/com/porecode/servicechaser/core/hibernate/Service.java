@@ -21,23 +21,20 @@ public class Service {
     private String title;
 
     @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "category_id")
     private Category category;
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "producers_services",
-            joinColumns =
-            @JoinColumn(name = "service_id", referencedColumnName = "id"),
-            inverseJoinColumns =
-            @JoinColumn(name = "producer_id", referencedColumnName = "id")
+            joinColumns = @JoinColumn(name = "service_id"),
+            inverseJoinColumns = @JoinColumn(name = "producer_id")
     )
     private Set<Producer> producers = new HashSet<Producer>();
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "parameter_values_services",
-            joinColumns =
-            @JoinColumn(name = "service_id", referencedColumnName = "id"),
-            inverseJoinColumns =
-            @JoinColumn(name = "parameter_value_id", referencedColumnName = "id")
+            joinColumns = @JoinColumn(name = "service_id"),
+            inverseJoinColumns = @JoinColumn(name = "parameter_value_id")
     )
     private Set<ParameterValue> parameterValues = new HashSet<ParameterValue>();
 

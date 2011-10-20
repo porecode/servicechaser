@@ -20,27 +20,23 @@ public class Category {
     private String title;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @Column(nullable=false)
-    @JoinColumn(name="parent_id")
+    @JoinColumn(name="id", referencedColumnName = "parent_id")
     private Set<Category> children = new HashSet<Category>();
 
-//    @ManyToOne(cascade = CascadeType.ALL)
-//    @Column(name="parent_id", nullable=false)
-//    private Category parent;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "parent_id", referencedColumnName = "id")
+    private Category parent;
 
-//    @ManyToMany(cascade = CascadeType.ALL)
-//    @JoinTable(name = "categories_parameters",
-//            joinColumns =
-//            @JoinColumn(name = "category_id", referencedColumnName = "id"),
-//            inverseJoinColumns =
-//            @JoinColumn(name = "parameter_id", referencedColumnName = "id")
-//    )
-//    private Set<Parameter> parameters = new HashSet<Parameter>();
-//
-//    @OneToMany(cascade = CascadeType.ALL)
-//    @JoinTable(name = "services",
-//            joinColumns = {@JoinColumn(name = "category_id", referencedColumnName = "id")})
-//    private Set<Service> services = new HashSet<Service>();
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "categories_parameters",
+            joinColumns = @JoinColumn(name = "category_id"),
+            inverseJoinColumns = @JoinColumn(name = "parameter_id")
+    )
+    private Set<Parameter> parameters = new HashSet<Parameter>();
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "category_id")
+    private Set<Service> services = new HashSet<Service>();
 
     public Category() {
     }
@@ -53,13 +49,13 @@ public class Category {
         return title;
     }
 
-//    public Set<Parameter> getParameters() {
-//        return parameters;
-//    }
-//
-//    public Set<Service> getServices() {
-//        return services;
-//    }
+    public Set<Parameter> getParameters() {
+        return parameters;
+    }
+
+    public Set<Service> getServices() {
+        return services;
+    }
 
     private void setId(Long id) {
         this.id = id;
@@ -69,11 +65,11 @@ public class Category {
         this.title = title;
     }
 
-//    public void setParameters(Set<Parameter> parameters) {
-//        this.parameters = parameters;
-//    }
-//
-//    public void setServices(Set<Service> services) {
-//        this.services = services;
-//    }
+    public void setParameters(Set<Parameter> parameters) {
+        this.parameters = parameters;
+    }
+
+    public void setServices(Set<Service> services) {
+        this.services = services;
+    }
 }

@@ -22,16 +22,15 @@ public class ParameterValue {
   @Column(nullable = true, name = "int_value")
   private Long intValue;
 
-//  @ManyToMany(cascade = CascadeType.ALL)
-//  @JoinTable(name = "parameter_values_services",
-//      joinColumns =
-//      @JoinColumn(name = "parameter_value_id", referencedColumnName = "id"),
-//      inverseJoinColumns =
-//      @JoinColumn(name = "service_id", referencedColumnName = "id")
-//  )
-//  private Set<Service> services = new HashSet<Service>();
+  @ManyToMany(cascade = CascadeType.ALL)
+  @JoinTable(name = "parameter_values_services",
+      joinColumns = @JoinColumn(name = "service_id"),
+      inverseJoinColumns = @JoinColumn(name = "parameter_value_id")
+  )
+  private Set<Service> services = new HashSet<Service>();
 
   @ManyToOne(cascade = CascadeType.ALL)
+  @JoinColumn(name = "parameter_id")
   private Parameter parameter;
 
   public ParameterValue() {
@@ -67,13 +66,13 @@ public class ParameterValue {
     this.intValue = intValue;
   }
 
-//  public Set<Service> getServices() {
-//    return services;
-//  }
-//
-//  public void setServices(Set<Service> services) {
-//    this.services = services;
-//  }
+  public Set<Service> getServices() {
+    return services;
+  }
+
+  public void setServices(Set<Service> services) {
+    this.services = services;
+  }
 
   public Parameter getParameter() {
     return parameter;
