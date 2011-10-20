@@ -835,6 +835,895 @@ public final class CoreServices {
     // @@protoc_insertion_point(class_scope:servicechaser.core.service.ParameterValueRequest)
   }
   
+  public interface CategoryResponseOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+    
+    // repeated .servicechaser.core.entity.Category categories = 1;
+    java.util.List<com.porecode.rpc.protobuf.EntityProtos.Category> 
+        getCategoriesList();
+    com.porecode.rpc.protobuf.EntityProtos.Category getCategories(int index);
+    int getCategoriesCount();
+    java.util.List<? extends com.porecode.rpc.protobuf.EntityProtos.CategoryOrBuilder> 
+        getCategoriesOrBuilderList();
+    com.porecode.rpc.protobuf.EntityProtos.CategoryOrBuilder getCategoriesOrBuilder(
+        int index);
+  }
+  public static final class CategoryResponse extends
+      com.google.protobuf.GeneratedMessage
+      implements CategoryResponseOrBuilder {
+    // Use CategoryResponse.newBuilder() to construct.
+    private CategoryResponse(Builder builder) {
+      super(builder);
+    }
+    private CategoryResponse(boolean noInit) {}
+    
+    private static final CategoryResponse defaultInstance;
+    public static CategoryResponse getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public CategoryResponse getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.porecode.rpc.protobuf.CoreServices.internal_static_servicechaser_core_service_CategoryResponse_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.porecode.rpc.protobuf.CoreServices.internal_static_servicechaser_core_service_CategoryResponse_fieldAccessorTable;
+    }
+    
+    // repeated .servicechaser.core.entity.Category categories = 1;
+    public static final int CATEGORIES_FIELD_NUMBER = 1;
+    private java.util.List<com.porecode.rpc.protobuf.EntityProtos.Category> categories_;
+    public java.util.List<com.porecode.rpc.protobuf.EntityProtos.Category> getCategoriesList() {
+      return categories_;
+    }
+    public java.util.List<? extends com.porecode.rpc.protobuf.EntityProtos.CategoryOrBuilder> 
+        getCategoriesOrBuilderList() {
+      return categories_;
+    }
+    public int getCategoriesCount() {
+      return categories_.size();
+    }
+    public com.porecode.rpc.protobuf.EntityProtos.Category getCategories(int index) {
+      return categories_.get(index);
+    }
+    public com.porecode.rpc.protobuf.EntityProtos.CategoryOrBuilder getCategoriesOrBuilder(
+        int index) {
+      return categories_.get(index);
+    }
+    
+    private void initFields() {
+      categories_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+      
+      memoizedIsInitialized = 1;
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < categories_.size(); i++) {
+        output.writeMessage(1, categories_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      for (int i = 0; i < categories_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, categories_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+    
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.porecode.rpc.protobuf.CoreServices.CategoryResponse prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.porecode.rpc.protobuf.CoreServices.CategoryResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.porecode.rpc.protobuf.CoreServices.internal_static_servicechaser_core_service_CategoryResponse_descriptor;
+      }
+      
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.porecode.rpc.protobuf.CoreServices.internal_static_servicechaser_core_service_CategoryResponse_fieldAccessorTable;
+      }
+      
+      // Construct using com.porecode.rpc.protobuf.CoreServices.CategoryResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+      
+      private Builder(BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getCategoriesFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+      
+      public Builder clear() {
+        super.clear();
+        if (categoriesBuilder_ == null) {
+          categories_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          categoriesBuilder_.clear();
+        }
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.porecode.rpc.protobuf.CoreServices.CategoryResponse.getDescriptor();
+      }
+      
+      public com.porecode.rpc.protobuf.CoreServices.CategoryResponse getDefaultInstanceForType() {
+        return com.porecode.rpc.protobuf.CoreServices.CategoryResponse.getDefaultInstance();
+      }
+      
+      public com.porecode.rpc.protobuf.CoreServices.CategoryResponse build() {
+        com.porecode.rpc.protobuf.CoreServices.CategoryResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+      
+      private com.porecode.rpc.protobuf.CoreServices.CategoryResponse buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        com.porecode.rpc.protobuf.CoreServices.CategoryResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return result;
+      }
+      
+      public com.porecode.rpc.protobuf.CoreServices.CategoryResponse buildPartial() {
+        com.porecode.rpc.protobuf.CoreServices.CategoryResponse result = new com.porecode.rpc.protobuf.CoreServices.CategoryResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (categoriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            categories_ = java.util.Collections.unmodifiableList(categories_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.categories_ = categories_;
+        } else {
+          result.categories_ = categoriesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.porecode.rpc.protobuf.CoreServices.CategoryResponse) {
+          return mergeFrom((com.porecode.rpc.protobuf.CoreServices.CategoryResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(com.porecode.rpc.protobuf.CoreServices.CategoryResponse other) {
+        if (other == com.porecode.rpc.protobuf.CoreServices.CategoryResponse.getDefaultInstance()) return this;
+        if (categoriesBuilder_ == null) {
+          if (!other.categories_.isEmpty()) {
+            if (categories_.isEmpty()) {
+              categories_ = other.categories_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCategoriesIsMutable();
+              categories_.addAll(other.categories_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.categories_.isEmpty()) {
+            if (categoriesBuilder_.isEmpty()) {
+              categoriesBuilder_.dispose();
+              categoriesBuilder_ = null;
+              categories_ = other.categories_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              categoriesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getCategoriesFieldBuilder() : null;
+            } else {
+              categoriesBuilder_.addAllMessages(other.categories_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public final boolean isInitialized() {
+        return true;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              onChanged();
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                onChanged();
+                return this;
+              }
+              break;
+            }
+            case 10: {
+              com.porecode.rpc.protobuf.EntityProtos.Category.Builder subBuilder = com.porecode.rpc.protobuf.EntityProtos.Category.newBuilder();
+              input.readMessage(subBuilder, extensionRegistry);
+              addCategories(subBuilder.buildPartial());
+              break;
+            }
+          }
+        }
+      }
+      
+      private int bitField0_;
+      
+      // repeated .servicechaser.core.entity.Category categories = 1;
+      private java.util.List<com.porecode.rpc.protobuf.EntityProtos.Category> categories_ =
+        java.util.Collections.emptyList();
+      private void ensureCategoriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          categories_ = new java.util.ArrayList<com.porecode.rpc.protobuf.EntityProtos.Category>(categories_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.porecode.rpc.protobuf.EntityProtos.Category, com.porecode.rpc.protobuf.EntityProtos.Category.Builder, com.porecode.rpc.protobuf.EntityProtos.CategoryOrBuilder> categoriesBuilder_;
+      
+      public java.util.List<com.porecode.rpc.protobuf.EntityProtos.Category> getCategoriesList() {
+        if (categoriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(categories_);
+        } else {
+          return categoriesBuilder_.getMessageList();
+        }
+      }
+      public int getCategoriesCount() {
+        if (categoriesBuilder_ == null) {
+          return categories_.size();
+        } else {
+          return categoriesBuilder_.getCount();
+        }
+      }
+      public com.porecode.rpc.protobuf.EntityProtos.Category getCategories(int index) {
+        if (categoriesBuilder_ == null) {
+          return categories_.get(index);
+        } else {
+          return categoriesBuilder_.getMessage(index);
+        }
+      }
+      public Builder setCategories(
+          int index, com.porecode.rpc.protobuf.EntityProtos.Category value) {
+        if (categoriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCategoriesIsMutable();
+          categories_.set(index, value);
+          onChanged();
+        } else {
+          categoriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      public Builder setCategories(
+          int index, com.porecode.rpc.protobuf.EntityProtos.Category.Builder builderForValue) {
+        if (categoriesBuilder_ == null) {
+          ensureCategoriesIsMutable();
+          categories_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          categoriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      public Builder addCategories(com.porecode.rpc.protobuf.EntityProtos.Category value) {
+        if (categoriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCategoriesIsMutable();
+          categories_.add(value);
+          onChanged();
+        } else {
+          categoriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      public Builder addCategories(
+          int index, com.porecode.rpc.protobuf.EntityProtos.Category value) {
+        if (categoriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCategoriesIsMutable();
+          categories_.add(index, value);
+          onChanged();
+        } else {
+          categoriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      public Builder addCategories(
+          com.porecode.rpc.protobuf.EntityProtos.Category.Builder builderForValue) {
+        if (categoriesBuilder_ == null) {
+          ensureCategoriesIsMutable();
+          categories_.add(builderForValue.build());
+          onChanged();
+        } else {
+          categoriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      public Builder addCategories(
+          int index, com.porecode.rpc.protobuf.EntityProtos.Category.Builder builderForValue) {
+        if (categoriesBuilder_ == null) {
+          ensureCategoriesIsMutable();
+          categories_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          categoriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      public Builder addAllCategories(
+          java.lang.Iterable<? extends com.porecode.rpc.protobuf.EntityProtos.Category> values) {
+        if (categoriesBuilder_ == null) {
+          ensureCategoriesIsMutable();
+          super.addAll(values, categories_);
+          onChanged();
+        } else {
+          categoriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      public Builder clearCategories() {
+        if (categoriesBuilder_ == null) {
+          categories_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          categoriesBuilder_.clear();
+        }
+        return this;
+      }
+      public Builder removeCategories(int index) {
+        if (categoriesBuilder_ == null) {
+          ensureCategoriesIsMutable();
+          categories_.remove(index);
+          onChanged();
+        } else {
+          categoriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      public com.porecode.rpc.protobuf.EntityProtos.Category.Builder getCategoriesBuilder(
+          int index) {
+        return getCategoriesFieldBuilder().getBuilder(index);
+      }
+      public com.porecode.rpc.protobuf.EntityProtos.CategoryOrBuilder getCategoriesOrBuilder(
+          int index) {
+        if (categoriesBuilder_ == null) {
+          return categories_.get(index);  } else {
+          return categoriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      public java.util.List<? extends com.porecode.rpc.protobuf.EntityProtos.CategoryOrBuilder> 
+           getCategoriesOrBuilderList() {
+        if (categoriesBuilder_ != null) {
+          return categoriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(categories_);
+        }
+      }
+      public com.porecode.rpc.protobuf.EntityProtos.Category.Builder addCategoriesBuilder() {
+        return getCategoriesFieldBuilder().addBuilder(
+            com.porecode.rpc.protobuf.EntityProtos.Category.getDefaultInstance());
+      }
+      public com.porecode.rpc.protobuf.EntityProtos.Category.Builder addCategoriesBuilder(
+          int index) {
+        return getCategoriesFieldBuilder().addBuilder(
+            index, com.porecode.rpc.protobuf.EntityProtos.Category.getDefaultInstance());
+      }
+      public java.util.List<com.porecode.rpc.protobuf.EntityProtos.Category.Builder> 
+           getCategoriesBuilderList() {
+        return getCategoriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.porecode.rpc.protobuf.EntityProtos.Category, com.porecode.rpc.protobuf.EntityProtos.Category.Builder, com.porecode.rpc.protobuf.EntityProtos.CategoryOrBuilder> 
+          getCategoriesFieldBuilder() {
+        if (categoriesBuilder_ == null) {
+          categoriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.porecode.rpc.protobuf.EntityProtos.Category, com.porecode.rpc.protobuf.EntityProtos.Category.Builder, com.porecode.rpc.protobuf.EntityProtos.CategoryOrBuilder>(
+                  categories_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          categories_ = null;
+        }
+        return categoriesBuilder_;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:servicechaser.core.service.CategoryResponse)
+    }
+    
+    static {
+      defaultInstance = new CategoryResponse(true);
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:servicechaser.core.service.CategoryResponse)
+  }
+  
+  public interface CategoryRequestOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+    
+    // optional int64 parent_id = 1;
+    boolean hasParentId();
+    long getParentId();
+  }
+  public static final class CategoryRequest extends
+      com.google.protobuf.GeneratedMessage
+      implements CategoryRequestOrBuilder {
+    // Use CategoryRequest.newBuilder() to construct.
+    private CategoryRequest(Builder builder) {
+      super(builder);
+    }
+    private CategoryRequest(boolean noInit) {}
+    
+    private static final CategoryRequest defaultInstance;
+    public static CategoryRequest getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public CategoryRequest getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.porecode.rpc.protobuf.CoreServices.internal_static_servicechaser_core_service_CategoryRequest_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.porecode.rpc.protobuf.CoreServices.internal_static_servicechaser_core_service_CategoryRequest_fieldAccessorTable;
+    }
+    
+    private int bitField0_;
+    // optional int64 parent_id = 1;
+    public static final int PARENT_ID_FIELD_NUMBER = 1;
+    private long parentId_;
+    public boolean hasParentId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    public long getParentId() {
+      return parentId_;
+    }
+    
+    private void initFields() {
+      parentId_ = 0L;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+      
+      memoizedIsInitialized = 1;
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, parentId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, parentId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+    
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static com.porecode.rpc.protobuf.CoreServices.CategoryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.porecode.rpc.protobuf.CoreServices.CategoryRequest prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.porecode.rpc.protobuf.CoreServices.CategoryRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.porecode.rpc.protobuf.CoreServices.internal_static_servicechaser_core_service_CategoryRequest_descriptor;
+      }
+      
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.porecode.rpc.protobuf.CoreServices.internal_static_servicechaser_core_service_CategoryRequest_fieldAccessorTable;
+      }
+      
+      // Construct using com.porecode.rpc.protobuf.CoreServices.CategoryRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+      
+      private Builder(BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+      
+      public Builder clear() {
+        super.clear();
+        parentId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.porecode.rpc.protobuf.CoreServices.CategoryRequest.getDescriptor();
+      }
+      
+      public com.porecode.rpc.protobuf.CoreServices.CategoryRequest getDefaultInstanceForType() {
+        return com.porecode.rpc.protobuf.CoreServices.CategoryRequest.getDefaultInstance();
+      }
+      
+      public com.porecode.rpc.protobuf.CoreServices.CategoryRequest build() {
+        com.porecode.rpc.protobuf.CoreServices.CategoryRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+      
+      private com.porecode.rpc.protobuf.CoreServices.CategoryRequest buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        com.porecode.rpc.protobuf.CoreServices.CategoryRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return result;
+      }
+      
+      public com.porecode.rpc.protobuf.CoreServices.CategoryRequest buildPartial() {
+        com.porecode.rpc.protobuf.CoreServices.CategoryRequest result = new com.porecode.rpc.protobuf.CoreServices.CategoryRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.parentId_ = parentId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.porecode.rpc.protobuf.CoreServices.CategoryRequest) {
+          return mergeFrom((com.porecode.rpc.protobuf.CoreServices.CategoryRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(com.porecode.rpc.protobuf.CoreServices.CategoryRequest other) {
+        if (other == com.porecode.rpc.protobuf.CoreServices.CategoryRequest.getDefaultInstance()) return this;
+        if (other.hasParentId()) {
+          setParentId(other.getParentId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public final boolean isInitialized() {
+        return true;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              onChanged();
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                onChanged();
+                return this;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              parentId_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      }
+      
+      private int bitField0_;
+      
+      // optional int64 parent_id = 1;
+      private long parentId_ ;
+      public boolean hasParentId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      public long getParentId() {
+        return parentId_;
+      }
+      public Builder setParentId(long value) {
+        bitField0_ |= 0x00000001;
+        parentId_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearParentId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        parentId_ = 0L;
+        onChanged();
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:servicechaser.core.service.CategoryRequest)
+    }
+    
+    static {
+      defaultInstance = new CategoryRequest(true);
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:servicechaser.core.service.CategoryRequest)
+  }
+  
   public static abstract class ParameterValueService
       implements com.google.protobuf.Service {
     protected ParameterValueService() {}
@@ -1056,6 +1945,227 @@ public final class CoreServices {
     }
   }
   
+  public static abstract class CategoryService
+      implements com.google.protobuf.Service {
+    protected CategoryService() {}
+    
+    public interface Interface {
+      public abstract void listChildren(
+          com.google.protobuf.RpcController controller,
+          com.porecode.rpc.protobuf.CoreServices.CategoryRequest request,
+          com.google.protobuf.RpcCallback<com.porecode.rpc.protobuf.CoreServices.CategoryResponse> done);
+      
+    }
+    
+    public static com.google.protobuf.Service newReflectiveService(
+        final Interface impl) {
+      return new CategoryService() {
+        @java.lang.Override
+        public  void listChildren(
+            com.google.protobuf.RpcController controller,
+            com.porecode.rpc.protobuf.CoreServices.CategoryRequest request,
+            com.google.protobuf.RpcCallback<com.porecode.rpc.protobuf.CoreServices.CategoryResponse> done) {
+          impl.listChildren(controller, request, done);
+        }
+        
+      };
+    }
+    
+    public static com.google.protobuf.BlockingService
+        newReflectiveBlockingService(final BlockingInterface impl) {
+      return new com.google.protobuf.BlockingService() {
+        public final com.google.protobuf.Descriptors.ServiceDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        
+        public final com.google.protobuf.Message callBlockingMethod(
+            com.google.protobuf.Descriptors.MethodDescriptor method,
+            com.google.protobuf.RpcController controller,
+            com.google.protobuf.Message request)
+            throws com.google.protobuf.ServiceException {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.callBlockingMethod() given method descriptor for " +
+              "wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return impl.listChildren(controller, (com.porecode.rpc.protobuf.CoreServices.CategoryRequest)request);
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+        
+        public final com.google.protobuf.Message
+            getRequestPrototype(
+            com.google.protobuf.Descriptors.MethodDescriptor method) {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.getRequestPrototype() given method " +
+              "descriptor for wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return com.porecode.rpc.protobuf.CoreServices.CategoryRequest.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+        
+        public final com.google.protobuf.Message
+            getResponsePrototype(
+            com.google.protobuf.Descriptors.MethodDescriptor method) {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.getResponsePrototype() given method " +
+              "descriptor for wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return com.porecode.rpc.protobuf.CoreServices.CategoryResponse.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+        
+      };
+    }
+    
+    public abstract void listChildren(
+        com.google.protobuf.RpcController controller,
+        com.porecode.rpc.protobuf.CoreServices.CategoryRequest request,
+        com.google.protobuf.RpcCallback<com.porecode.rpc.protobuf.CoreServices.CategoryResponse> done);
+    
+    public static final
+        com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptor() {
+      return com.porecode.rpc.protobuf.CoreServices.getDescriptor().getServices().get(1);
+    }
+    public final com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    
+    public final void callMethod(
+        com.google.protobuf.Descriptors.MethodDescriptor method,
+        com.google.protobuf.RpcController controller,
+        com.google.protobuf.Message request,
+        com.google.protobuf.RpcCallback<
+          com.google.protobuf.Message> done) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.callMethod() given method descriptor for wrong " +
+          "service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          this.listChildren(controller, (com.porecode.rpc.protobuf.CoreServices.CategoryRequest)request,
+            com.google.protobuf.RpcUtil.<com.porecode.rpc.protobuf.CoreServices.CategoryResponse>specializeCallback(
+              done));
+          return;
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+    
+    public final com.google.protobuf.Message
+        getRequestPrototype(
+        com.google.protobuf.Descriptors.MethodDescriptor method) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.getRequestPrototype() given method " +
+          "descriptor for wrong service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          return com.porecode.rpc.protobuf.CoreServices.CategoryRequest.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+    
+    public final com.google.protobuf.Message
+        getResponsePrototype(
+        com.google.protobuf.Descriptors.MethodDescriptor method) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.getResponsePrototype() given method " +
+          "descriptor for wrong service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          return com.porecode.rpc.protobuf.CoreServices.CategoryResponse.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+    
+    public static Stub newStub(
+        com.google.protobuf.RpcChannel channel) {
+      return new Stub(channel);
+    }
+    
+    public static final class Stub extends com.porecode.rpc.protobuf.CoreServices.CategoryService implements Interface {
+      private Stub(com.google.protobuf.RpcChannel channel) {
+        this.channel = channel;
+      }
+      
+      private final com.google.protobuf.RpcChannel channel;
+      
+      public com.google.protobuf.RpcChannel getChannel() {
+        return channel;
+      }
+      
+      public  void listChildren(
+          com.google.protobuf.RpcController controller,
+          com.porecode.rpc.protobuf.CoreServices.CategoryRequest request,
+          com.google.protobuf.RpcCallback<com.porecode.rpc.protobuf.CoreServices.CategoryResponse> done) {
+        channel.callMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          com.porecode.rpc.protobuf.CoreServices.CategoryResponse.getDefaultInstance(),
+          com.google.protobuf.RpcUtil.generalizeCallback(
+            done,
+            com.porecode.rpc.protobuf.CoreServices.CategoryResponse.class,
+            com.porecode.rpc.protobuf.CoreServices.CategoryResponse.getDefaultInstance()));
+      }
+    }
+    
+    public static BlockingInterface newBlockingStub(
+        com.google.protobuf.BlockingRpcChannel channel) {
+      return new BlockingStub(channel);
+    }
+    
+    public interface BlockingInterface {
+      public com.porecode.rpc.protobuf.CoreServices.CategoryResponse listChildren(
+          com.google.protobuf.RpcController controller,
+          com.porecode.rpc.protobuf.CoreServices.CategoryRequest request)
+          throws com.google.protobuf.ServiceException;
+    }
+    
+    private static final class BlockingStub implements BlockingInterface {
+      private BlockingStub(com.google.protobuf.BlockingRpcChannel channel) {
+        this.channel = channel;
+      }
+      
+      private final com.google.protobuf.BlockingRpcChannel channel;
+      
+      public com.porecode.rpc.protobuf.CoreServices.CategoryResponse listChildren(
+          com.google.protobuf.RpcController controller,
+          com.porecode.rpc.protobuf.CoreServices.CategoryRequest request)
+          throws com.google.protobuf.ServiceException {
+        return (com.porecode.rpc.protobuf.CoreServices.CategoryResponse) channel.callBlockingMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          com.porecode.rpc.protobuf.CoreServices.CategoryResponse.getDefaultInstance());
+      }
+      
+    }
+  }
+  
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_servicechaser_core_service_ParameterValueResponse_descriptor;
   private static
@@ -1066,6 +2176,16 @@ public final class CoreServices {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_servicechaser_core_service_ParameterValueRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_servicechaser_core_service_CategoryResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_servicechaser_core_service_CategoryResponse_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_servicechaser_core_service_CategoryRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_servicechaser_core_service_CategoryRequest_fieldAccessorTable;
   
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1081,11 +2201,17 @@ public final class CoreServices {
       ".proto\"]\n\026ParameterValueResponse\022C\n\020para" +
       "meter_values\030\001 \003(\0132).servicechaser.core." +
       "entity.ParameterValue\"\027\n\025ParameterValueR" +
-      "equest2\211\001\n\025ParameterValueService\022p\n\007List" +
-      "All\0221.servicechaser.core.service.Paramet" +
-      "erValueRequest\0322.servicechaser.core.serv" +
-      "ice.ParameterValueResponseB\036\n\031com.poreco",
-      "de.rpc.protobuf\210\001\001"
+      "equest\"K\n\020CategoryResponse\0227\n\ncategories" +
+      "\030\001 \003(\0132#.servicechaser.core.entity.Categ" +
+      "ory\"$\n\017CategoryRequest\022\021\n\tparent_id\030\001 \001(" +
+      "\0032\211\001\n\025ParameterValueService\022p\n\007ListAll\0221",
+      ".servicechaser.core.service.ParameterVal" +
+      "ueRequest\0322.servicechaser.core.service.P" +
+      "arameterValueResponse2|\n\017CategoryService" +
+      "\022i\n\014ListChildren\022+.servicechaser.core.se" +
+      "rvice.CategoryRequest\032,.servicechaser.co" +
+      "re.service.CategoryResponseB\036\n\031com.porec" +
+      "ode.rpc.protobuf\210\001\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1108,6 +2234,22 @@ public final class CoreServices {
               new java.lang.String[] { },
               com.porecode.rpc.protobuf.CoreServices.ParameterValueRequest.class,
               com.porecode.rpc.protobuf.CoreServices.ParameterValueRequest.Builder.class);
+          internal_static_servicechaser_core_service_CategoryResponse_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+          internal_static_servicechaser_core_service_CategoryResponse_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_servicechaser_core_service_CategoryResponse_descriptor,
+              new java.lang.String[] { "Categories", },
+              com.porecode.rpc.protobuf.CoreServices.CategoryResponse.class,
+              com.porecode.rpc.protobuf.CoreServices.CategoryResponse.Builder.class);
+          internal_static_servicechaser_core_service_CategoryRequest_descriptor =
+            getDescriptor().getMessageTypes().get(3);
+          internal_static_servicechaser_core_service_CategoryRequest_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_servicechaser_core_service_CategoryRequest_descriptor,
+              new java.lang.String[] { "ParentId", },
+              com.porecode.rpc.protobuf.CoreServices.CategoryRequest.class,
+              com.porecode.rpc.protobuf.CoreServices.CategoryRequest.Builder.class);
           return null;
         }
       };

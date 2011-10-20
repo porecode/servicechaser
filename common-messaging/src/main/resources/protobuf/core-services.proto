@@ -17,3 +17,14 @@ service ParameterValueService {
   rpc ListAll(ParameterValueRequest) returns(ParameterValueResponse);
 }
 
+message CategoryResponse {
+  repeated servicechaser.core.entity.Category categories = 1;
+}
+
+message CategoryRequest {
+  optional int64 parent_id = 1;
+}
+
+service CategoryService {
+  rpc ListChildren(CategoryRequest) returns(CategoryResponse);
+}

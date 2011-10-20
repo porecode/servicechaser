@@ -1,11 +1,14 @@
 package com.porecode.servicechaser.core.dao;
 
-import com.porecode.servicechaser.core.dao.impl.ParameterValueDaoImpl;
-import com.porecode.servicechaser.core.hibernate.ParameterValue;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.porecode.servicechaser.core.dao.impl.CategoryDaoImpl;
+import com.porecode.servicechaser.core.hibernate.Category;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Criterion;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -13,12 +16,12 @@ import java.util.ArrayList;
 import static org.easymock.EasyMock.*;
 
 /**
- * @author filipovskii_off
+ * @author fealaer
  */
-public class TestParameterValueDao {
+public class TestCategoryDao {
 
   @Test
-  public void testSelectAllEntities() throws Exception {
+  public void testSelectChildrenEntities() throws Exception {
     SessionFactory sessionFactory = createMock(SessionFactory.class);
     Session session  = createMock(Session.class);
     Criteria criteria = createMock(Criteria.class);
@@ -26,8 +29,9 @@ public class TestParameterValueDao {
 
     expect(sessionFactory.getCurrentSession()).andReturn(session);
     expect(session.beginTransaction()).andReturn(trans);
-    expect(session.createCriteria(ParameterValue.class)).andReturn(criteria);
-    expect(criteria.list()).andReturn(new ArrayList<ParameterValue>());
+    expect(session.createCriteria(Category.class)).andReturn(criteria);
+    expect(criteria.add(anyObject(Criterion.class))).andReturn(criteria);
+    expect(criteria.list()).andReturn(new ArrayList<Category>());
     trans.commit();
 
     replay(sessionFactory);
@@ -35,8 +39,8 @@ public class TestParameterValueDao {
     replay(criteria);
     replay(trans);
 
-    ParameterValueDao dao = new ParameterValueDaoImpl(sessionFactory);
-    dao.selectAll();
+    CategoryDao dao = new CategoryDaoImpl(sessionFactory);
+    dao.selectAllChildren(0);
 
     verify(sessionFactory);
     verify(session);
