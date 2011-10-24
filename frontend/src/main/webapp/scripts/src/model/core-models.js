@@ -1,11 +1,13 @@
-define(["scripts/lib/backbone/backbone-min.js"], function() {
+define(function() {
 
   // Category
   
   var Cat = Backbone.Model.extend({
     
     parse: function(json) {
+      //this.set('id', json.id);
       this.set(json);
+      return this;
     }
              
   });
@@ -14,10 +16,13 @@ define(["scripts/lib/backbone/backbone-min.js"], function() {
   CatCol = Backbone.Collection.extend({
 
     model: Cat,
+    url: "scripts/test/data/categories.js",
 
     parse: function(json) {
+      console.log(json);
+      console.log('from collection');
       for (modelJs in json) {
-         var cat = new Category();
+         var cat = new Cat();
          this.add(cat.parse(modelJs));
       }
     }

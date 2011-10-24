@@ -1,5 +1,6 @@
 
-require(["scripts/lib/underscore/underscore-min.js",
+require(["scripts/lib/underscore/underscore.js",
+    "scripts/lib/backbone/backbone.js",
     "scripts/lib/jquery/jquery-min.js",
     "scripts/test/lib/jasmine/jasmine.js",
     //include files with tests here
