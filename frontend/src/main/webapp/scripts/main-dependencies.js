@@ -1,10 +1,10 @@
 
 require(["scripts/lib/less/less-min.js",
-    "scripts/lib/underscore/underscore.js",
-    "scripts/lib/jquery/jquery-min.js",
-    "scripts/lib/backbone/backbone.js",
+    "order!scripts/lib/jquery/jquery-min.js",
+    "order!scripts/lib/underscore/underscore.js",
+    "order!scripts/lib/backbone/backbone.js",
 
-    "src/routes",
+    "order!src/routes",
     "src/util/html-loader"], function() {
     var Routes = require("src/routes");
     var mainRouter = new Routes.MainRouter;

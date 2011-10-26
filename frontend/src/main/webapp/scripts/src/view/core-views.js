@@ -1,5 +1,4 @@
 define(["src/util/html-loader",
-    "scripts/lib/backbone/backbone-min.js",
     "scripts/lib/mustache/mustache.js"], 
     function(Loader) {
       var CategoryClass = Backbone.View.extend({

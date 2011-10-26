@@ -31,13 +31,31 @@ define(["src/view/core-views",
         title: 'someTitle',
         children: []
       }
-      var model = new Models.Category();
-      model.parse(message);
+      var model = new Models.Category(message);
       expect(model.get('id')).toBe(message.id);
       expect(model.get('title')).toBe(message.title);
       expect(model.get('children')).toBe(message.children);
     });
 
+    it("can be fetched from test resource", function() {
+      var list = new Models.CategoryCollection();
+      list.url = 'scripts/test/data/categories.json';
+
+      expect(list.length).toBe(0);
+
+      list.fetch({
+        success: function(col) {
+          expect(list.length).toBeGreaterThan(1);
+          list.each(function(model) {
+            expect(model.get('id')).toBeDefined();
+            expect(model.get('title')).toBeDefined();
+          });
+        }
+      });
+    });
+
   });
+
+
 });
 

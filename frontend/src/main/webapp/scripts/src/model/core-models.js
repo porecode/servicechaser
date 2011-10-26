@@ -4,11 +4,9 @@ define(function() {
   
   var Cat = Backbone.Model.extend({
     
-    parse: function(json) {
-      //this.set('id', json.id);
-      this.set(json);
-      return this;
-    }
+//    parse: function(json) {
+//      return json;
+//    }
              
   });
 
@@ -16,16 +14,16 @@ define(function() {
   CatCol = Backbone.Collection.extend({
 
     model: Cat,
-    url: "scripts/test/data/categories.js",
+    url: "scripts/test/data/categories.json",
 
-    parse: function(json) {
-      console.log(json);
-      console.log('from collection');
-      for (modelJs in json) {
-         var cat = new Cat();
-         this.add(cat.parse(modelJs));
-      }
-    }
+//    parse: function(json) {
+//      console.log('parsing col');
+//      for (i in json) {
+//         var cat = new Cat();
+//         this.add(json[i]);
+//      }
+//      return this;
+//    }
 
   });
 

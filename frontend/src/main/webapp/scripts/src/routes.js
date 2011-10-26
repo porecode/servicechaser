@@ -1,6 +1,5 @@
 define(["src/model/core-models",
-  "scripts/lib/jquery/jquery.js",
-  "scripts/lib/backbone/backbone.js"], function(Models) {
+        "src/view/core-views"], function(Models, Views) {
     var router = Backbone.Router.extend({
       
       routes: {
@@ -9,23 +8,24 @@ define(["src/model/core-models",
       },
 
       list_categories: function(parent_id) {
-        $('div.container').empty();
+        console.log("list_cat route, id " + parent_id);
         var categories = new Models.CategoryCollection();
+        var container = $('div#categories');
         categories.fetch({
-          error: function(e, e1) {console.dir(e1);},
-          complete: function(a, b) {console.dir(a); console.dir(b);},
-          success: function(a,b) {console.dir(a); console.dir(b);}
-        });
-        categories.forEach(function(cat) {
-          console.dir(cat);
-          console.log(cat.get('title'));
-          console.dir(cat.toJSON());
-          $('div.container').append(cat.render().el);
+          success: function() {
+            container.empty();
+            categories.each(function(cat) {
+              var v = new Views.Category({
+                model: cat,
+              }).render();
+              container.append(v.el);
+            });
+          }
         });
       },
 
       defaultRoute: function(args) {
-        alert(args);
+        console.log("default route " + args);
       }
 
     });
