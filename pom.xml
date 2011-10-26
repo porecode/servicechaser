@@ -119,18 +119,6 @@
     </dependency-->
 
     <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-core</artifactId>
-      <version>4.0.0.CR3</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-annotations</artifactId>
-      <version>3.5.6-Final</version>
-    </dependency>
-
-    <dependency>
       <groupId>com.google.code.guice</groupId>
       <artifactId>guice</artifactId>
       <version>3.0-r1291</version>
