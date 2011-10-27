@@ -1,7 +1,5 @@
 package com.porecode.servicechaser.core.dao;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
 import com.porecode.servicechaser.core.dao.impl.CategoryDaoImpl;
 import com.porecode.servicechaser.core.hibernate.Category;
 import org.hibernate.Criteria;
@@ -39,7 +37,7 @@ public class TestCategoryDao {
     replay(criteria);
     replay(trans);
 
-    CategoryDao dao = new CategoryDaoImpl(sessionFactory);
+    CategoryDao dao = new CategoryDaoImpl(null);
     dao.selectAllChildren(0);
 
     verify(sessionFactory);

@@ -29,7 +29,7 @@ public final class ParameterValueDaoImpl implements ParameterValueDao {
     Session session = sessionFactory.getCurrentSession();
     Transaction trans = session.beginTransaction();
     try {
-          return session.createCriteria(ParameterValue.class).list();
+      return session.createCriteria(ParameterValue.class).list();
     } finally {
       trans.commit();
     }
